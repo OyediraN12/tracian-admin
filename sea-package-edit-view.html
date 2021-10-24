@@ -397,22 +397,22 @@
                     <div class="card">
                         <div class="card-body">
                             <form>
-                                <h3>Air Package details</h3> <p class="badge badge-info badge-pill">0001</p>
+                                <h3>Sea Package details</h3> <p class="badge badge-info badge-pill">0002</p>
                                 <div class="form-row pd-3">
                                     <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Customer Account Number</label>
-                                        <input type="text" class="form-control" disabled >
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Consignee</label>
-                                        <input type="text" class="form-control" disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Courier company</label>
+                                        <label class="col-form-label bold">Customer Account Number<span class="red-as">*</span></label>
                                         <input type="text" class="form-control" >
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Shipper/Merchant</label>
+                                        <label class="col-form-label bold">Consignee</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="col-form-label bold">Courier company<span class="red-as">*</span></label>
+                                        <input type="text" class="form-control" >
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="col-form-label bold">Shipper/Merchant<span class="red-as">*</span></label>
                                         <input type="text" class="form-control">
                                     </div>
                                     <div class="form-group col-md-6">
@@ -420,30 +420,39 @@
                                         <input type="email" class="form-control" >
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Package Description</label>
+                                        <label class="col-form-label bold">Package Description<span class="red-as">*</span></label>
                                         <input type="text" class="form-control">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Number Of Pieces</label>
+                                        <label class="col-form-label bold">Number Of Pieces<span class="red-as">*</span></label>
                                         <input type="text" class="form-control">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Package Value(USD)</label>
+                                        <label class="col-form-label bold">Package Value(USD)<span class="red-as">*</span></label>
                                         <input type="text" class="form-control">
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Actual Weight (LBS)</label>
-                                        <input type="text" class="form-control" id="lbs" onkeyup="mult(this.value);">
+                                    <div class="form-group col-md-12">
+                                        <h6>Package Dimensions:</h6>
+                                        <p><strong>Note:</strong>Package Dimensions can be found in the product description of your online purchases. Please note that all packages will be measured by the package dimensions, not item dimensions.</p>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Actual Weight (KG)</label>
-                                        <input type="text" class="form-control" id="kg" disabled>
+                                        <label class="col-form-label bold">Length(In)<span class="red-as">*</span></label>
+                                        <input type="text" class="form-control" id="lgth" placeholder="0.00" onkeyup="new2(this.value);">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Total Weight (LBS)</label>
-                                        <input type="text" class="form-control" id="lbs2"  disabled>
+                                        <label class="col-form-label bold">Width(In)<span class="red-as">*</span></label>
+                                        <input type="text" class="form-control" id="wdth" placeholder="0.00" onkeyup="new2(this.value);">
                                     </div>
                                     <div class="form-group col-md-6">
+                                        <label class="col-form-label bold">Height(In))</label>
+                                        <input type="text" class="form-control" id="hght"placeholder="0.00" onkeyup="new2(this.value);">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="col-form-label bold">VOlume(ft<sup>3</sup>)</label>
+                                        <input type="text" class="form-control" id="vol"disabled>
+                                        <p>Length x Width x Height x Quantity</p>
+                                    </div>
+                                    <div class="form-group col-md-12">
                                         <label class="col-form-label bold">File upload</label>
                                         <input type="file" name="img[]" class="file-upload-default">
                                         <div class="input-group col-xs-12">
@@ -457,7 +466,7 @@
                                         <label class="col-form-label bold">Copy And Paste Invoice/ Document</label>
                                         <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
                                     </div>
-                                    <a href="create-pakage=id2.html" class="btn btn-success mb-2 mr-2">Save Changes</a>
+                                    <button type="button" class="btn btn-info mb-2 mr-2">Save Changes</button>
                                 </div>
                             </form>
                         </div>
@@ -468,7 +477,7 @@
                             <form action="">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Tracking Id</label>
+                                    <label class="col-form-label bold">In House Tracking ID</label>
                                     <input type="text" class="form-control" disabled >
                                 </div>
                                 <div class="form-group col-md-6">
@@ -570,18 +579,30 @@
     <script src="js/default-assets/setting.js"></script>
     <script src="js/default-assets/fullscreen.js"></script>
     <script>
-
-        function mult(value){
-            var x, y ;
-            x = 1.00 * value
-            y = 0.453 * value;
-            z=  1 * value
-            document.getElementById('lbs').value = x;
-            document.getElementById('kg').value = y;
-            document.getElementById('lbs2').value = z;
-        }
-
-    </script>
+    function new2(value){
+        var a, b, c, z;
+        a = document.getElementById("lgth").value;
+        b = document.getElementById("wdth").value;
+        c = document.getElementById("hght").value;
+        l = a*b*c;
+        document.getElementById('vol').value = l;
+    }
+ 
+         
+     </script>
+       <script>
+ 
+         function sea(value){
+             var q, r, s, t;
+             q = document.getElementById("lgth1").value;
+             r = document.getElementById("wdth1").value;
+             s = document.getElementById("hght1").value;
+             t = q*r*s;
+             document.getElementById('vol1').value = t;
+         }
+      
+              
+           </script>
 
     <!-- Active JS -->
     <script src="js/default-assets/active.js"></script>
