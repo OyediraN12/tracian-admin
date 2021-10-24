@@ -18,6 +18,8 @@
 
     <!-- Master Stylesheet [If you remove this CSS file, your file will be broken undoubtedly.] -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/default-assets/datatables.bootstrap4.css">
+    <link rel="stylesheet" href="css/default-assets/responsive.bootstrap4.css">
     <style>
         .red-as{
             color: red;
@@ -397,20 +399,13 @@
             <!-- Main Content Area -->
             <div class="main-content">
                 <div class="container-fluid">
-
-                    <div class="alert alert-success" role="alert">
-                        <i class="dripicons-checkmark mr-2"></i> Air Package created succesfully!! click to view package details 
-                    </div>
                     <!-- MultiStep Form -->
                     <div class="card create  mb-30">
                         <div class="card-body">
-                            
-                            <form action="">
-                                <div class="form-group col-md-12 mt-4">
-                                    <label class="col-form-label">Courier Tracking Number <span class="red-as">*</span></label>
-                                    <input type="email" class="form-control"  placeholder="Courier tracking Number check">
-                                </div>
-                            </form>
+                            <div class="p-3">
+                                <h4>Package Management</h4>
+                            <p>View package details</p>
+                            </div>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation"> <a class="nav-link active" id="air-tab" data-toggle="tab" href="#air" role="tab" aria-controls="air" aria-selected="true">Air</a> </li>
                                 <li class="nav-item" role="presentation"> <a class="nav-link" id="sea-drop-tab" data-toggle="tab" href="#sea-drop" role="tab" aria-controls="sea-drop" aria-selected="false">Sea Drop</a> </li>
@@ -418,71 +413,68 @@
                             </ul>
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="air" role="tabpanel" aria-labelledby="air-tab">
-                                    <p><span class="red-as">**</span> 2 to 5 business days after items are delivered to our warehouse.</p>
-                                    <h5 class="text-center">Create Air Package</h5>
-                                    <form>
-                                        <div class="form-row pd-3">
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Customer Account Number<span class="red-as">*</span></label>
-                                                <input type="text" class="form-control" >
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Consignee</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Courier company<span class="red-as">*</span></label>
-                                                <input type="text" class="form-control" >
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Shipper/Merchant<span class="red-as">*</span></label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Remarks</label>
-                                                <input type="email" class="form-control" >
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Package Description<span class="red-as">*</span></label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Number Of Pieces<span class="red-as">*</span></label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Package Value(USD)<span class="red-as">*</span></label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Actual Weight (LBS)<span class="red-as">*</span></label>
-                                                <input type="text" class="form-control" value="0.00">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Actual Weight (KG)</label>
-                                                <input type="text" class="form-control" disabled>
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">Total Weight (LBS)</label>
-                                                <input type="text" class="form-control" disabled>
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label class="col-form-label bold">File upload</label>
-                                                <input type="file" name="img[]" class="file-upload-default">
-                                                <div class="input-group col-xs-12">
-                                                    <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
-                                                    <span class="input-group-append">
-                                                        <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-12">
-                                                <label class="col-form-label bold">Copy And Paste Invoice/ Document</label>
-                                                <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
-                                            </div>
-                                            <a href="create-pakage=id2.html" class="btn btn-success mb-2 mr-2">Create Air Package</a>
-                                        </div>
-                                    </form>
+                                        
+                                   <div class="table-responsive mt-3">
+                                    <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                                        <thead>
+                                            <tr>
+                                                <th>Accout Number</th>
+                                                <th>Cosignee</th>
+                                                <th>Courier Company</th>
+                                                <th>Shipper</th>
+                                                <th>Package description</th>
+                                                <th>Number of Piece</th>
+                                                <th>Label</th>
+                                                <th>Package Status</th>
+                                                <th>Payment Status</th>
+                                                <th>Tracking Id</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0001</td>
+                                                <td>Taiwo Josh</td>
+                                                <td>Fed X</td>
+                                                <td>Fed X</td>
+                                                <td>Clothings/ shoes/ bag</td>
+                                                <td>3</td>
+                                                <td>U898JJBHH</td>
+                                                <td><span class="badge badge-warning badge-pill">Not delivered</span> </td>
+                                                <td><span class="badge badge-danger badge-pill">Not Paid</span> </td>
+                                                <td>#YU7878HGF7Y8H</td>
+                                                <td>
+                                                    <a href="#" class="action-item mr-2" data-toggle="tooltip" title="" data-original-title="Edit">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a href="#" class="action-item text-danger mr-2" data-toggle="tooltip" title="" data-original-title="Move to trash">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>0002</td>
+                                                <td>Taiwo Josh</td>
+                                                <td>Fed X</td>
+                                                <td>Fed X</td>
+                                                <td>Clothings/ shoes/ bag</td>
+                                                <td>3</td>
+                                                <td>U898JJBHH</td>
+                                                <td><span class="badge badge-success badge-pill">Delivered</span> </td>
+                                                <td><span class="badge badge-info badge-pill">Paid</span> </td>
+                                                <td>#YU7878HGF7Y8H</td>
+                                                <td>
+                                                    <a href="#" class="action-item mr-2" data-toggle="tooltip" title="" data-original-title="Edit">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a href="#" class="action-item text-danger mr-2" data-toggle="tooltip" title="" data-original-title="Move to trash">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                   </div>
                                 </div>
                                 <div class="tab-pane fade" id="sea-drop" role="tabpanel" aria-labelledby="sea-drop-tab">
                                     <p><span class="red-as">**</span> 5 to 10 business days after items are delivered to our warehouse.</p>
@@ -699,6 +691,19 @@
     <script src="js/default-assets/file-upload.js"></script>
     <script src="js/default-assets/basic-form.js"></script>
     
+    <!-- table script -->
+    <script src="js/default-assets/jquery.datatables.min.js"></script>
+    <script src="js/default-assets/datatables.bootstrap4.js"></script>
+    <script src="js/default-assets/datatable-responsive.min.js"></script>
+    <script src="js/default-assets/responsive.bootstrap4.min.js"></script>
+    <script src="js/default-assets/datatable-button.min.js"></script>
+    <script src="js/default-assets/button.bootstrap4.min.js"></script>
+    <script src="js/default-assets/button.html5.min.js"></script>
+    <script src="js/default-assets/button.flash.min.js"></script>
+    <script src="js/default-assets/button.print.min.js"></script>
+    <script src="js/default-assets/datatables.keytable.min.js"></script>
+    <script src="js/default-assets/datatables.select.min.js"></script>
+    <script src="js/default-assets/demo.datatable-init.js"></script>
     <!-- wizard script -->
 
 </body>
