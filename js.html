@@ -7,9 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="out1x" placeholder=""  onkeyup="mult(this.value);">
+    <!-- <input type="text" id="out1x" placeholder=""  onkeyup="mult(this.value);">
     <input type="text" id="out2x" readonly disabled>
     <input type="text" id ="out3x" readonly disabled>
+    <input type="text" id="out4x"> -->
+    <input type="text" id="out1x" placeholder=""  onkeyup="mult(this.value);">
+    <input type="text" id="out2x" onkeyup="mult(this.value);" >
+    <input type="text" id ="out3x" >
     <input type="text" id="out4x">
 
 </body>
@@ -17,7 +21,7 @@
 <script>
 
    function mult(value){
-       var x, y ;
+       var x, y,z;
        x = 1.00 * value
        y = 3 * value;
        z=  1* value
