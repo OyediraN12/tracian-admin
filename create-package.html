@@ -451,15 +451,15 @@
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label class="col-form-label bold">Actual Weight (LBS)<span class="red-as">*</span></label>
-                                                <input type="text" class="form-control" value="0.00">
+                                                <input type="text" class="form-control" id="lbs" onkeyup="mult(this.value);">
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label class="col-form-label bold">Actual Weight (KG)</label>
-                                                <input type="text" class="form-control" value="4"disabled>
+                                                <input type="text" class="form-control" id="kg" disabled>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label class="col-form-label bold">Total Weight (LBS)</label>
-                                                <input type="text" class="form-control" value="4" disabled>
+                                                <input type="text" class="form-control" id="lbs2"  disabled>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label class="col-form-label bold">File upload</label>
@@ -522,15 +522,15 @@
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label class="col-form-label bold">Length(In)<span class="red-as">*</span></label>
-                                                <input type="text" class="form-control" value="0.00">
+                                                <input type="text" class="form-control" id="lgth" placeholder="0.00">
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label class="col-form-label bold">Width(In)<span class="red-as">*</span></label>
-                                                <input type="text" class="form-control" value="0.00">
+                                                <input type="text" class="form-control" id="wdth" placeholder="0.00">
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label class="col-form-label bold">Height(In))</label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control" id="hght"placeholder="0.00">
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label class="col-form-label bold">VOlume(ft<sup>3</sup>)</label>
@@ -693,6 +693,30 @@
     <script src="js/default-assets/active.js"></script>
     <script src="js/default-assets/file-upload.js"></script>
     <script src="js/default-assets/basic-form.js"></script>
+
+    <!-- conversion script -->
+    <script>
+
+        function mult(value){
+            var x, y ;
+            x = 1.00 * value
+            y = 0.453 * value;
+            z=  1 * value
+            document.getElementById('lbs').value = x;
+            document.getElementById('kg').value = y;
+            document.getElementById('lbs2').value = z;
+        }
+
+        function mult2(value){
+            var  ;
+            x = 1.00 * value
+            y = 0.453 * value;
+            z=  1 * value
+            document.getElementById('lbs').value = x;
+            document.getElementById('kg').value = y;
+            document.getElementById('lbs2').value = z;
+        }
+     </script>
     
     <!-- wizard script -->
 

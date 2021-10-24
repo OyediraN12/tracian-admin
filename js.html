@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="out1x" placeholder=""  onkeyup="mult(this.value);">
+    <input type="text" id="out2x" readonly disabled>
+    <input type="text" id ="out3x" readonly disabled>
+    <input type="text" id="out4x">
+
+</body>
+
+<script>
+
+   function mult(value){
+       var x, y ;
+       x = 1.00 * value
+       y = 3 * value;
+       z=  1* value
+       document.getElementById('out2x').value = x;
+       document.getElementById('out3x').value = y;
+       document.getElementById('out4x').value = z;
+   }
+</script>
+</html>
