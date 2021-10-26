@@ -1,0 +1,138 @@
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.container12{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 70%;
+    height: 400%;
+    margin-right: auto;
+    margin-left: auto;
+    border:3px solid black;
+    
+}
+.sub-heading{
+    font-size: 18px;
+}
+.brand-section{
+    background-color: #fff;
+    padding: 10px 40px;
+}
+.logo{
+    width: 40%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-16{
+    width: 50%;
+    flex: 0 0 auto;
+}
+.text-white{
+    color: #fff;
+}
+.company-details{
+    float: right;
+    text-align: right;
+}
+.body-section{
+    padding: 0px;
+    border-bottom: 2px solid black;
+}
+.heading{
+    font-size: 20px;
+    margin-bottom: 08px;
+}
+
+.bold{
+    font-weight: bolder;
+}
+.center{
+    text-align: center;
+}
+.padding{
+    padding: 40px;
+}
+
+.right2{
+    margin-left: 50px
+}
+.right1{
+    margin-left: 55px;
+}
+.right3{
+    margin-left: 35px;
+}
+.left1{
+    margin-right: 20px;
+}
+.col-right{
+    margin-left: 50px;
+}
+.vertical-line{
+    border-right: 3px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    height:215 px;
+    padding: 0px;
+
+}
+.vertical-2{
+    border-bottom: 2px solid black;
+}
+.pd-10{
+    padding: 30px;
+}
+.bold{
+    font-size: 20px;
+    font-weight: bold;
+}
+.priority{
+    font-size: 34px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+/* fp -first */
+.fp{
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+/* package details */
+.pe{
+    text-align: end;
+    font-size: 20PX;
+    font-weight: 800;
+    padding: 30px;
+}
+.details{
+    text-align: end;
+    padding: 2px;
+}
+.section-2{
+    border-bottom:2px ;
+}
+.pe-details{
+    border-bottom: 2px solid ;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+@media print {
+    .no-print {
+      visibility: hidden;
+    }
+  }
