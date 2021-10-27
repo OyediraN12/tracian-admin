@@ -18,6 +18,8 @@
 
     <!-- Master Stylesheet [If you remove this CSS file, your file will be broken undoubtedly.] -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/default-assets/datatables.bootstrap4.css">
+    <link rel="stylesheet" href="css/default-assets/responsive.bootstrap4.css">
     <style>
         .bold{
             font-weight: bolder;
@@ -191,7 +193,7 @@
                                     <li><a href="crm-contact.html"> <i class="fa fa-trash"></i>Delete Packages</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="index.html"><i class="fa fa-address-book-o"></i> <span>Client Center</span></a></li>
+                            <li class=""><a href="index.html"><i class="fa fa-address-book-o"></i> <span>Client Centeracka</span></a></li>
                             <li class="treeview">
                                 <a href="javascript:void(0)"><i class="fa fa-user"></i> <span>Employees</span> <i class="fa fa-angle-right"></i></a>
                                 <ul class="treeview-menu">
@@ -199,7 +201,6 @@
                                     <li><a href="analytic-report.html"><i class="fa fa-vcard-o"></i>Manage Employees</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="index.html"><i class="fa fa-th"></i> <span>Roles</span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -405,71 +406,63 @@
                 <div class="container-fluid">
                     <!-- MultiStep Form -->
                     <div class="card create mb-30">
-                        <div class="card-body">
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="step1" role="tabpanel" aria-labelledby="step1-tab">
-                                    <h4 class="text-center mt-4 mb-4" style="text-transform: uppercase;">Create Container</h4>
-                                    <form>
-                                        <div class="form-row pd-3">
-                                            <div class="form-group col-md-4">
-                                                <label for="inputCity" class="col-form-label bold">Container Type</label>
-                                                <select id="inputState" class="form-control">
-                                                    <option disabled>Select Type</option>
-                                                    <option>Air</option>
-                                                    <option>SEA</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="inputState" class="col-form-label bold">Origin</label>
-                                                <select id="inputState" class="form-control">
-                                                    <option disabled>Select Origin</option>
-                                                    <option>Miami</option>
-                                                    <option>Fort Lauderdale</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="inputState" class="col-form-labelvbold">Destination</label>
-                                                <select id="inputState" class="form-control">
-                                                    <option disabled>Select Destination</option>
-                                                    <option>Kingston</option>
-                                                    <option>Montego Bay</option>
-                                                </select>
-                                            </div>
-                                            <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                                <a href="#Step2" class=" btn btn-primary mt-3 mt-sm-0 nav-link" id="Step2-tab" data-toggle="tab" href="#Step2" role="tab" aria-controls="Step2" aria-selected="false" style="text-decoration: none; color: #fff;">Next</a>
-                                            </div>
+                        <div class="card-header">
+                            <h4>Add New Employee</h4>
+                        </div>
+                        <div class="card-body mt-3">
+                            <div class="col-md-12 table-responsive mb-30">
+                                <form action="">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="" class="col-form-label">First Name</label>
+                                            <input type="text" class="form-control" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="" class="col-form-label">Last Name</label>
+                                            <input type="password" class="form-control"  placeholder="Last Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="" class="col-form-label">Email Address</label>
+                                            <input type="text" class="form-control" placeholder="Email Address">
+                                        </div>
+    
+                                        <div class="form-group col-md-6">
+                                            <label for="" class="col-form-label">Telephone</label>
+                                            <input type="text" class="form-control" id="inputAddress2" placeholder="Telephone">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputState" class="col-form-label">Position / Role of Employee</label>
+                                        <select id="inputState" class="form-control">
+                                            <option>Select</option>
+                                            <option>Cashier</option>
+                                            <option>Warehouse Assistance</option>
+                                            <option>Shipper</option>
+                                            <option>Supervisor</option>
+                                            <option>Manager</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="" class="col-form-label">Password</label>
+                                            <input type="password" class="form-control" id="Password" placeholder="Password">
                                         </div>
                                         
-                                    </form>
-                                    
-                                </div>
-                                <div class="tab-pane fade" id="Step2" role="tabpanel" aria-labelledby="Step2-tab">
-                                    <h4 class="text-center mt-4 mb-4" style="text-transform: uppercase;">Container Destination</h4>
-                                    <form>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="inputEmail4" class="col-form-label">Box Number</label>
-                                                <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Box Number">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="" class="col-form-label">Box Location</label>
-                                                <input type="text" class="form-control" id="" placeholder="Enter Box Location">
-                                            </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="" class="col-form-label">Confirm Password</label>
+                                            <input type="password" class="form-control" id="Password" placeholder="Confirm Password">
                                         </div>
-
-                                        <div class="form-group">
-                                            <label for="inputAddress" class="col-form-label">Scan Packages</label>
-                                            <input type="text" class="form-control" id="inputAddress" placeholder="scan shippment barcodes">
-                                        </div>
-                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                            <a href="" class="btn btn-primary mt-3 mt-sm-0 " style="text-decoration: none; color: #fff;">Submit</a>
-                                        </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Create Employee</button>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="height-300"></div>
+                    <div class="height-200"></div>
                 </div>
 
                 <!-- Footer Area -->
@@ -508,8 +501,23 @@
     <script src="js/default-assets/setting.js"></script>
     <script src="js/default-assets/fullscreen.js"></script>
 
+    <!-- data table script -->
+    <script src="js/default-assets/jquery.datatables.min.js"></script>
+    <script src="js/default-assets/datatables.bootstrap4.js"></script>
+    <script src="js/default-assets/datatable-responsive.min.js"></script>
+    <script src="js/default-assets/responsive.bootstrap4.min.js"></script>
+    <script src="js/default-assets/datatable-button.min.js"></script>
+    <script src="js/default-assets/button.bootstrap4.min.js"></script>
+    <script src="js/default-assets/button.html5.min.js"></script>
+    <script src="js/default-assets/button.flash.min.js"></script>
+    <script src="js/default-assets/button.print.min.js"></script>
+    <script src="js/default-assets/datatables.keytable.min.js"></script>
+    <script src="js/default-assets/datatables.select.min.js"></script>
+    <script src="js/default-assets/demo.datatable-init.js"></script>
+
     <!-- Active JS -->
     <script src="js/default-assets/active.js"></script>
+    
     
     <!-- wizard script -->
     <script>
