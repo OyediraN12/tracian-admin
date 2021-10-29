@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from demo.riktheme.com/antina-v2/minimalistic/advanced-elements.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Oct 2021 10:22:02 GMT -->
+<!-- Mirrored from demo.riktheme.com/antina-v2/minimalistic/data-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Oct 2021 10:22:23 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -17,18 +17,18 @@
     <link rel="icon" href="img/core-img/favicon.png">
 
     <!-- These plugins only need for the run this page -->
-    <link rel="stylesheet" href="css/default-assets/select2.min.css">
-    <link rel="stylesheet" href="css/default-assets/jquery.bootstrap-touchspin.min.css">
-    <link rel="stylesheet" href="css/bootstrap-colorpicker.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" href="css/default-assets/color-picker-bootstrap.css">
-    <link rel="stylesheet" href="css/default-assets/jquery.tagsinput.min.css">
-    <link rel="stylesheet" href="css/default-assets/daterange-picker.css">
-    <link rel="stylesheet" href="css/default-assets/form-picker.css">
+    <link rel="stylesheet" href="css/default-assets/datatables.bootstrap4.css">
+    <link rel="stylesheet" href="css/default-assets/responsive.bootstrap4.css">
+    <link rel="stylesheet" href="css/default-assets/buttons.bootstrap4.css">
+    <link rel="stylesheet" href="css/default-assets/select.bootstrap4.css">
 
     <!-- Master Stylesheet [If you remove this CSS file, your file will be broken undoubtedly.] -->
     <link rel="stylesheet" href="style.css">
-
+    <style>
+        .pd{
+            width: 150px;
+        }
+    </style>
 </head>
 
 <body>
@@ -163,11 +163,11 @@
                                     <li><a href="c3-charts.html">- C3 Chart</a></li>
                                 </ul>
                             </li>
-                            <li class="treeview active">
+                            <li class="treeview">
                                 <a href="javascript:void(0)"><i class="zmdi zmdi-washing-machine"></i><span>Forms</span> <i class="fa fa-angle-right"></i></a>
                                 <ul class="treeview-menu">
                                     <li><a href="basic-form.html">- Basic Form</a></li>
-                                    <li class="active"><a href="advanced-elements.html">- Elements</a></li>
+                                    <li><a href="advanced-elements.html">- Elements</a></li>
                                     <li><a href="form-validation.html">- Validation</a></li>
                                     <li><a href="form-wizard.html">- Form Wizard</a></li>
                                     <li><a href="form-input-mask.html">- Input Mask</a></li>
@@ -175,12 +175,12 @@
                                     <li><a href="rating.html">- Rating</a></li>
                                 </ul>
                             </li>
-                            <li class="treeview">
+                            <li class="treeview active">
                                 <a href="javascript:void(0)"><i class="zmdi zmdi-grid"></i><span>Tables</span> <i class="fa fa-angle-right"></i></a>
                                 <ul class="treeview-menu">
                                     <li><a href="basic-table.html">- Basic Table</a></li>
                                     <li><a href="filter-table.html">- Filter Table</a></li>
-                                    <li><a href="data-table.html">- Data Table</a></li>
+                                    <li class="active"><a href="data-table.html">- Data Table</a></li>
                                     <li><a href="price-table.html">- Price Table</a></li>
                                 </ul>
                             </li>
@@ -419,353 +419,197 @@
 
             <!-- Main Content Area -->
             <div class="main-content">
-                <!-- Basic Form area Start -->
-                <div class="container-fluid">
-                    <!-- Form row -->
-                    <div class="row">
-                        <div class="col-12 box-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Checkbox</h5>
-                                    <span class="d-block mb-20">Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>
-                                    <div class="row">
-                                        <div class="col-xl-4 col-md-6">
-                                            <h5 class="card-title">Default checkbox</h5>
-                                            <hr>
-                                            <div class="form-group">
-                                                <div class="checkbox d-inline">
-                                                    <input type="checkbox" name="checkbox-1" id="checkbox-1" checked="">
-                                                    <label for="checkbox-1" class="cr">Checked</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="checkbox d-inline">
-                                                    <input type="checkbox" name="checkbox-1" id="checkbox-2">
-                                                    <label for="checkbox-2" class="cr">Uncheck</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="checkbox d-inline m-r-10">
-                                                    <input type="checkbox" id="checkbox-3" disabled="">
-                                                    <label for="checkbox-3" class="cr">Disabled</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="checkbox d-inline m-r-10">
-                                                    <input type="checkbox" id="checkbox-4" disabled="" checked="">
-                                                    <label for="checkbox-4" class="cr">Disabled Checked</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-xl-4 col-md-6">
-                                            <h5 class="card-title">Primary checkbox</h5>
-                                            <hr>
-                                            <div class="form-group">
-                                                <div class="checkbox checkbox-primary d-inline">
-                                                    <input type="checkbox" name="checkbox-p-1" id="checkbox-p-1" checked="">
-                                                    <label for="checkbox-p-1" class="cr">Checked</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="checkbox checkbox-primary d-inline">
-                                                    <input type="checkbox" name="checkbox-p-1" id="checkbox-p-2">
-                                                    <label for="checkbox-p-2" class="cr">Uncheck</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="checkbox checkbox-primary d-inline m-r-10">
-                                                    <input type="checkbox" id="checkbox-p-3" disabled="">
-                                                    <label for="checkbox-p-3" class="cr">Disabled</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="checkbox checkbox-primary d-inline m-r-10">
-                                                    <input type="checkbox" id="checkbox-p-4" disabled="" checked="">
-                                                    <label for="checkbox-p-4" class="cr">Disabled Checked</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-xl-4 col-md-6">
-                                            <h5 class="card-title">Danger checkbox</h5>
-                                            <hr>
-                                            <div class="form-group">
-                                                <div class="checkbox checkbox-danger d-inline">
-                                                    <input type="checkbox" name="checkbox-d-1" id="checkbox-d-1" checked="">
-                                                    <label for="checkbox-d-1" class="cr">Checked</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="checkbox checkbox-danger d-inline">
-                                                    <input type="checkbox" name="checkbox-d-1" id="checkbox-d-2">
-                                                    <label for="checkbox-d-2" class="cr">Uncheck</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="checkbox checkbox-danger d-inline m-r-10">
-                                                    <input type="checkbox" id="checkbox-d-3" disabled="">
-                                                    <label for="checkbox-d-3" class="cr">Disabled</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="checkbox checkbox-danger d-inline m-r-10">
-                                                    <input type="checkbox" id="checkbox-d-4" disabled="" checked="">
-                                                    <label for="checkbox-d-4" class="cr">Disabled Checked</label>
-                                                </div>
-                                            </div>
+                <div class="data-table-area">
+                    <div class="container-fluid">
+                        <div class="col-md-12 card mb-3">
+                            <div class="card-header">
+                                <h4>#Customer <span class="badge badge-info badge-pill">DS10001</span></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="pills-pdetails-tab" data-toggle="pill" href="#pills-pdetails" role="tab" aria-controls="pills-pdetails" aria-selected="true">PERSONAL DETAILS</a>
+                                              </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="pills-shippment-tab" data-toggle="pill" href="#pills-shippment" role="tab" aria-controls="pills-shippment" aria-selected="true">SHIPPMENT DETAILS</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="pills-packagefee-tab" data-toggle="pill" href="#pills-packagefee" role="tab" aria-controls="pills-packagefee" aria-selected="false">PACKAGE FEES</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">UNKNOWN</a>
+                                            </li>
+                                          </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-pdetails" role="tabpanel"aria-labelledby="pills-pdetails-tab">
+                                        <div class="row">
+                                            <div class="col-12 box-margin">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th class="pd">Full Name</th>
+                                                                        <td>Mark Jason</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Email</th>
+                                                                        <td>mark@gmail.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Phone</th>
+                                                                        <td>+23470545455555</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>ID Number</th>
+                                                                        <td>5656565</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>ID Type</th>
+                                                                        <td>Passport</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Tax Reg No</th>
+                                                                        <td>333333</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>PickUp Location</th>
+                                                                        <td>Kingston</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Account No</th>
+                                                                        <td><span class="badge badge-info badge-pill">DS10001</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Account Created on</th>
+                                                                        <td>12/10/2021</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div> <!-- end card body-->
+                                                </div> <!-- end card -->
+                                            </div><!-- end col-->
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 box-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Toggle Switch</h4>
-                                    <div class="new-checkbox">
-                                        <!-- Rectangular switch -->
-                                        <label class="switch mr-3">
-                                            <input type="checkbox">
-                                            <span class="slider"></span>
-                                        </label>
-
-                                        <!-- Rounded switch -->
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 box-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Animated Search Form</h4>
-                                    <div class="animated-search-box">
-                                        <input type="text" name="search" placeholder="Search..">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 box-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title mb-1">Fullscreen Search Box</h4>
-                                    <p class="mb-30">Click on the button to open the search box.</p>
-                                    <div class="fullscreen-search-box">
-                                        <div id="myOverlay" class="overlay">
-                                            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
-                                            <div class="overlay-content">
-                                                <form action="http://demo.riktheme.com/action_page.php">
-                                                    <input type="text" placeholder="Search.." name="search">
-                                                    <button type="submit"><i class="fa fa-search"></i></button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-primary" onclick="openSearch()">Open Search Box</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 box-margin height-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Normal Touchspin</h4>
-                                    <form class="mt-20">
-                                        <input id="demo3" type="text" value="-1" name="demo3">
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 box-margin height-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Postfix Touchspin</h4>
-                                    <form class="mt-20">
-                                        <input id="demo1" type="text" value="55" name="demo1">
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 box-margin height-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Prefix Touchspin</h4>
-                                    <form class="mt-20">
-                                        <div class="form-group">
-                                            <input id="demo2" type="text" value="0" name="demo2" class="col-md-8 form-control">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 box-margin height-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-t itle">Vertical button alignment</h4>
-                                    <form class="mt-20">
-                                        <div class="form-group">
-                                            <input id="demo_vertical" type="text" value="" name="demo_vertical">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 box-margin height-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-title mb-1">Tags input</h6>
-                                    <p class="mb-20">Type something to add a new tag</p>
-                                    <div>
-                                        <input name="tags" id="tags" value="New York,Texas,Florida,New Mexico" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 box-margin height-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title mb-1">Colorpicker</h4>
-                                    <p class="sub-header">Bootstrap Colorpicker is a modular color picker plugin for Bootstrap 4</p>
-
-                                    <div class="form-group mb-3">
-                                        <label>Default</label>
-                                        <input type="text" id="basic-colorpicker" class="form-control" placeholder="Basic colorpicker">
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label>Hexa Color</label>
-                                        <input type="text" id="hexa-colorpicker" class="form-control" value="#4a81d4">
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label>As Component</label>
-                                        <div id="component-colorpicker" class="input-group" title="Using format option">
-                                            <input type="text" class="form-control input-lg" value="#305AA2" />
-                                            <span class="input-group-append">
-                                                <span class="input-group-text colorpicker-input-addon"><i></i></span>
-                                            </span>
+                                    <div class="tab-pane fade " id="pills-shippment" role="tabpanel" aria-labelledby="pills-shippment-tab">
+                                        <div class="row">
+                                            <div class="col-12 box-margin">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Acct No</th>
+                                                                    <th>Tracking Id</th>
+                                                                    <th>Package Type</th>
+                                                                    <th>Cosignee</th>
+                                                                    <th>Courier Company</th>
+                                                                    <th>Shipper</th>
+                                                                    <th>Package description</th>
+                                                                    <th>Package Status</th>
+                                                                    <th>Actions</th>
+                                                                </tr>
+                                                            </thead>
+                
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>0001</td>
+                                                                    <td>We2Qaweodk</td>
+                                                                    <td>Air</td>
+                                                                    <td>Taiwo Josh</td>
+                                                                    <td>Fed X</td>
+                                                                    <td>Clothings/ shoes/ bag</td>
+                                                                    <td><span class="badge badge-warning badge-pill">Not delivered</span> </td>
+                                                                    <td><span class="badge badge-danger badge-pill">Not Paid</span> </td>
+                                                                    <td> <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Quick view in PM">
+                                                                        <i class="fa fa-external-link"></i>
+                                                                    </a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0001</td>
+                                                                    <td>We2Qaweodk</td>
+                                                                    <td>Air</td>
+                                                                    <td>Taiwo Josh</td>
+                                                                    <td>Fed X</td>
+                                                                    <td>Clothings/ shoes/ bag</td>
+                                                                    <td><span class="badge badge-warning badge-pill">Not delivered</span> </td>
+                                                                    <td><span class="badge badge-danger badge-pill">Not Paid</span> </td>
+                                                                    <td> <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Quick view in PM">
+                                                                        <i class="fa fa-external-link"></i>
+                                                                    </a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                
+                                                    </div> <!-- end card body-->
+                                                </div> <!-- end card -->
+                                            </div><!-- end col-->
                                         </div>
                                     </div>
-
-                                    <div class="form-group mb-3">
-                                        <label>Horizontal</label>
-                                        <input type="text" id="horizontal-colorpicker" class="form-control" value="#8fff00">
+                                    <div class="tab-pane fade" id="pills-packagefee" role="tabpanel" aria-labelledby="pills-packagefee-tab">
+                                        <div class="row">
+                                            <div class="col-12 box-margin">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Package allocated amount</th>
+                                                                    <th>Custom Charges</th>
+                                                                    <th title="package amount + custom charges">Total</th>
+                                                                    <th>Package Type</th>
+                                                                    <th>Package description</th>
+                                                                    <th>Tracking Id</th>
+                                                                    <th>Package Status</th>
+                                                                </tr>
+                                                            </thead>
+                
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>$23.00</td>
+                                                                    <td>$5.00</td>
+                                                                    <td>$28.00</td>
+                                                                    <td>Air</td>
+                                                                    <td>SHoes</td>
+                                                                    <td>Hyty7787HVGhcGG</td>
+                                                                    <td><span class="badge badge-warning badge-pill">Not delivered</span> </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>$23.00</td>
+                                                                    <td>$5.00</td>
+                                                                    <td>$28.00</td>
+                                                                    <td>Air</td>
+                                                                    <td>SHoes</td>
+                                                                    <td>Hyty7787HVGhcGG</td>
+                                                                    <td><span class="badge badge-warning badge-pill">Not delivered</span> </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                
+                                                    </div> <!-- end card body-->
+                                                </div> <!-- end card -->
+                                            </div><!-- end col-->
+                                        </div>
                                     </div>
-
-                                    <div class="form-group mb-0">
-                                        <label>Inline</label>
-                                        <div id="inline-colorpicker"></div>
-                                    </div>
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-12 box-margin height-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title mb-1">Clock Picker</h4>
-                                    <p class="sub-header">A clock-style timepicker for Bootstrap.</p>
-
-                                    <div class="form-group mb-3">
-                                        <label>Default Clock Picker</label>
-                                        <div class="input-group clockpicker">
-                                            <input type="text" class="form-control" value="09:30">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text"><i class="ti-time"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label>Auto close</label>
-                                        <div class="input-group clockpicker" data-placement="top" data-align="top" data-autoclose="true">
-                                            <input type="text" class="form-control" value="13:14">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text"><i class="ti-time"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label>Now time</label>
-                                        <div class="input-group m-b-20">
-                                            <input class="form-control" id="single-input" type="text" value="" placeholder="Now">
-                                            <div class="input-group-append">
-                                                <button type="button" id="check-minutes" class="btn waves-effect waves-light btn-primary">Check </button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group mb-0">
-                                        <label>Place at left, align the arrow to top </label>
-                                        <div class="input-group clockpicker" data-placement="top" data-align="top">
-                                            <input type="text" class="form-control" value="13:14">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text"><i class="ti-time"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 box-margin height-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title mb-1">Bootstrap Datepicker</h4>
-                                    <p class="sub-header">Bootstrap-datepicker provides a flexible datepicker widget in the Bootstrap style.</p>
-
-                                    <div class="form-group mb-3">
-                                        <label>Date Picker</label>
-                                        <input type="text" class="form-control" data-provide="datepicker">
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label>Date View</label>
-                                        <input type="text" class="form-control" data-provide="datepicker" data-date-format="d-M-yyyy">
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label>Multi Datepicker</label>
-                                        <input type="text" class="form-control" data-provide="datepicker" data-date-multidate="true">
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label>Autoclose</label>
-                                        <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true">
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label>Month View</label>
-                                        <input type="text" class="form-control" data-provide="datepicker" data-date-format="MM yyyy" data-date-min-view-mode="1">
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label>Year View</label>
-                                        <input type="text" class="form-control" data-provide="datepicker" data-date-min-view-mode="2">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <!-- Footer Area -->
-                <div class="container-fluid">
+                <div class="container-fluid mt-3">
                     <div class="row">
                         <div class="col-12">
                             <!-- Footer Area -->
@@ -804,50 +648,21 @@
     <script src="js/default-assets/active.js"></script>
 
     <!-- These plugins only need for the run this page -->
-    <script src="js/default-assets/file-upload.js"></script>
-    <script src="js/default-assets/basic-form.js"></script>
-    <script src="js/default-assets/jquery.bootstrap-touchspin.min.js"></script>
-    <script src="js/default-assets/jquery.bootstrap-touchspin.custom.js"></script>
-    <script src="js/bootstrap-colorpicker.min.js"></script>
-    <script src="js/default-assets/colorpicker-bootstrap.js"></script>
-    <script src="js/default-assets/jquey.tagsinput.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/default-assets/daterange-picker.js"></script>
-    <script src="js/default-assets/form-picker.js"></script>
-    <script src="js/default-assets/select2.min.js"></script>
-    <script src="js/default-assets/select2-custom.js"></script>
-
-    <script>
-        $(function() {
-            'use strict';
-
-            $('#tags').tagsInput({
-                'width': '100%',
-                'height': '85%',
-                'interactive': true,
-                'defaultText': 'Add More',
-                'removeWithBackspace': true,
-                'minChars': 0,
-                'maxChars': 20,
-                'placeholderColor': '#555'
-            });
-        });
-    </script>
-
-    <script>
-        // Open the full screen search box
-        function openSearch() {
-            document.getElementById("myOverlay").style.display = "block";
-        }
-
-        // Close the full screen search box
-        function closeSearch() {
-            document.getElementById("myOverlay").style.display = "none";
-        }
-    </script>
+    <script src="js/default-assets/jquery.datatables.min.js"></script>
+    <script src="js/default-assets/datatables.bootstrap4.js"></script>
+    <script src="js/default-assets/datatable-responsive.min.js"></script>
+    <script src="js/default-assets/responsive.bootstrap4.min.js"></script>
+    <script src="js/default-assets/datatable-button.min.js"></script>
+    <script src="js/default-assets/button.bootstrap4.min.js"></script>
+    <script src="js/default-assets/button.html5.min.js"></script>
+    <script src="js/default-assets/button.flash.min.js"></script>
+    <script src="js/default-assets/button.print.min.js"></script>
+    <script src="js/default-assets/datatables.keytable.min.js"></script>
+    <script src="js/default-assets/datatables.select.min.js"></script>
+    <script src="js/default-assets/demo.datatable-init.js"></script>
 
 </body>
 
 
-<!-- Mirrored from demo.riktheme.com/antina-v2/minimalistic/advanced-elements.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Oct 2021 10:22:10 GMT -->
+<!-- Mirrored from demo.riktheme.com/antina-v2/minimalistic/data-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Oct 2021 10:22:23 GMT -->
 </html>

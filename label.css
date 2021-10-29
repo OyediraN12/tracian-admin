@@ -1,14 +1,5 @@
-
-h1,h2,h3,h4,h5,h6{
-    margin: 0;
-    padding: 0;
-}
-p{
-    margin: 0;
-    padding: 0;
-}
 .container12{
-    width: 60%;
+    width: 38%;
     margin-right: auto;
     margin-left: auto;
     border:3px solid black;
@@ -26,7 +17,7 @@ p{
     flex-wrap: wrap;
 }
 .col-16{
-    width: 55%;
+    width: 50%;
     flex: 0 0 auto;
 }
 .text-white{
@@ -50,10 +41,8 @@ p{
 }
 .center{
     text-align: center;
-    padding: 8px;
 }
-.padding{
-}
+
 
 .right2{
     margin-left: 50px
@@ -81,9 +70,7 @@ p{
     border-bottom: 2px solid black;
 }
 .pd-10{
-    font-size: 20px;
-    padding: 10px;
-    font-weight: bold;
+    padding: 5px;
 }
 .bold{
     font-size: 20px;
@@ -135,21 +122,3 @@ p{
 .text2{
     font-size: 17px;
 }
-@media screen and (max-width: 480px) {
-    .label-img{
-     width:50px;
-     height: 50px;
-     margin-left: 10px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .pd-10{
-     font-size: 18px;
-     padding: 0px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .container12{
-     width: 100%;
-    }
-  }
