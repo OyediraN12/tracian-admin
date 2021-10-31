@@ -1,5 +1,5 @@
 .container12{
-    width: 45%;
+    width: 50%;
     margin-right: auto;
     margin-left: auto;
     border:3px solid black;
@@ -17,8 +17,7 @@
     flex-wrap: wrap;
 }
 .col-16{
-    width: 50%;
-    flex: 0 0 auto;
+    width: 400px;
 }
 .text-white{
     color: #fff;
@@ -123,3 +122,12 @@
 .text2{
     font-size: 17px;
 }
+
+@media print {
+    .no-print {
+      display: none;
+    }
+    .container12{
+        width: ;
+    }
+  }
