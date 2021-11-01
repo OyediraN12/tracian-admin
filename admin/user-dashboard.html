@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+   <title>Antina - Responsive Bootstrap Admin Template</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.png">
+    
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/tracking.css">
+    <link rel="stylesheet" href="css/default-assets/modal.css">
+    
+    <!-- Master Stylesheet [If you remove this CSS file, your file will be broken undoubtedly.] -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .standard-details{
+        margin-right: 40px;
+    }
+        .text1{
+            color:#17a2b8;
+            text-align: center;;
+        }
+    .ship-address{
+        margin-top: 30px;
+    }
+    .calculator{
+        color:red;
+    }
+    .form-line{
+        border: 3px solid #ff5630;
+        border-radius:4px;
+    }
+    .line{
+        padding:20px
+    }
+    .express{
+        padding:14px
+    }
+    .plane{
+        color:white;
+        font-size: 30px;
+    }
+    .plane-modal{
+        font-size: 50px;
+        text-align: center;
+        color:#17a2b8;
+    }
+    .ship-address{
+        width:200px
+    }
+    .text-white{
+        color:#fff;
+    }
+    .bold{
+            font-weight: bolder;
+        }
+         .create .social-area {
+     text-align: center;
+     padding-top: 14px
+     }
+
+    .create .social-area .title {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: inline-block;
+        color: #007bff;
+        position: relative
+    }
+
+    .create .social-area .text {
+        font-size: 17px;
+        font-weight: 400;
+        color: #143250
+    }
+
+    .create .social-area .title::before {
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 1px;
+        background: rgba(0, 0, 0, .2);
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 100%;
+        margin-left: 7px
+    }
+
+    .create .social-area .title::after {
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 1px;
+        background: rgba(0, 0, 0, .2);
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right: 100%;
+        margin-right: 7px
+    }
+
+    .create ul.social-links {
+     padding: 0;
+     margin: 0
+    }
+
+    .create .social-area .social-links li {
+        display: inline-block
+    }
+
+    .create .social-area .social-links li a i {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        line-height: 50px;
+        display: inline-block;
+        color: #fff;
+        margin: 0 5px;
+        -webkit-box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+        box-shadow: 0 5px 10px rgb(0 0 0 / 15%)
+    }
+
+    .create .social-area .social-links li a i.fa-facebook-f {
+        background: #0069f7
+    }
+
+    .create .social-area .social-links li a i.fa-google-plus-g {
+        background: #d1062c
+    }
+
+    .create .nav-tabs .nav-link.active {
+        background: #007bff
+    }
+
+    .create .nav-tabs .nav-link {
+        background: #143250
+    }
+
+    .create .nav-tabs .nav-link {
+        border: 0;
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+        border-radius: 0;
+        color: #fff
+    }
+
+    .create .nav-tabs li.nav-item {
+        width: 50%
+    }
+
+    .create .card-body {
+        padding: 0px
+    }
+
+    .create .card-body .tab-content {
+        padding: 0 1.25rem 1.75em
+    }
+    </style>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-load"></div>
+    </div>
+    <!-- Preloader -->
+
+    <!-- ======================================
+    ******* Page Wrapper Area Start **********
+    ======================================= -->
+    <div class="ecaps-page-wrapper">
+        <!-- Sidemenu Area -->
+        <div class="ecaps-sidemenu-area">
+            <!-- Desktop Logo -->
+            <div class="ecaps-logo">
+                <a href="index.html"><img class="desktop-logo" src="img/core-img/logo.png" alt="Desktop Logo"> <img class="small-logo" src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
+            </div>
+
+            <!-- Side Nav -->
+            <div class="ecaps-sidenav" id="ecapsSideNav">
+                <!-- Side Menu Area -->
+                <div class="side-menu-area">
+                    <!-- Sidebar Menu -->
+                    <nav>
+                        <ul class="sidebar-menu" data-widget="tree">
+                            <li class=""><a href="index.html"><i class="zmdi zmdi-view-web"></i> <span>Dashboard</span></a></li>
+                            <li class=""><a href="index.html"><i class="fa fa-inbox"></i> <span>Packages</span></a></li>
+                            <li class=""><a href="index.html"><i class="fa fa-credit-card"></i> <span>Payment</span></a></li>
+                            <li class=""><a href="index.html"><i class="fa fa-user"></i> <span>Users</span></a></li>
+                            <li class=""><a href="index.html"><i class="fa fa-user-plus"></i> <span>Refer a Friend</span></a></li>
+                            <li class=""><a href="index.html"><i class="fa fa-user-o"></i> <span>Profile</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="ecaps-page-content">
+            <!-- Top Header Area -->
+            <header class="top-header-area d-flex align-items-center justify-content-between">
+                <div class="left-side-content-area d-flex align-items-center">
+                    <div class="ecaps-triggers mr-1 mr-sm-3">
+                        <div class="menu-collasped" id="menuCollasped">
+                            <i class="zmdi zmdi-menu"></i>
+                        </div>
+                        <div class="mobile-menu-open" id="mobileMenuOpen">
+                            <i class="zmdi zmdi-menu"></i>
+                        </div>
+                    </div>
+                    <!-- Mobile Logo -->
+                    <div class="mobile-logo mr-3 mr-sm-4">
+                        <a href="index.html"><img src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
+                    </div>
+                    <!-- Triggers -->
+                </div>
+
+                <div class="right-side-navbar d-flex align-items-center justify-content-end">
+                    <!-- Mobile Trigger -->
+                    <div class="right-side-trigger" id="rightSideTrigger">
+                        <i class="fa fa-reorder"></i>
+                    </div>
+
+                    <!-- Top Bar Nav -->
+                    <ul class="right-side-content d-flex align-items-center">
+                        <!-- Left Side Nav -->
+                        <li class="hide-phone app-search">
+                            <form role="search" class=""><input type="text" placeholder="Search..." class="form-control"> <button type="submit" class="mr-0"><i class="fa fa-search"></i></button></form>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- Top Message Area -->
+                                <div class="top-message-area">
+                                    <!-- Heading -->
+                                    <div class="top-message-heading">
+                                        <div class="heading-title">
+                                            <h6>Messages</h6>
+                                        </div>
+                                        <span>07 New</span>
+                                    </div>
+                                    <div class="message-box" id="messageBox">
+                                        <a href="#" class="dropdown-item">
+                                            <img src="img/member-img/10.png" alt="">
+                                            <span class="message-text">
+                                                <span>Jhon Lina</span>
+                                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, voluptas!</span>
+                                            </span>
+                                        </a>
+                                        <span class="message-heading">New Messages</span>
+                                        <a href="#" class="dropdown-item">
+                                            <img src="img/member-img/11.png" alt="">
+                                            <span class="message-text">
+                                                <span>Google Ads: You'll get a refund soon</span>
+                                                <span>27 min ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <img src="img/member-img/7.png" alt="">
+                                            <span class="message-text">
+                                                <span>New Feature: HTTP Method Selection</span>
+                                                <span>56 min ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <img src="img/member-img/8.png" alt="">
+                                            <span class="message-text">
+                                                <span>The Complete JavaScript Handbook</span>
+                                                <span>1 hour ago</span>
+                                            </span>
+                                        </a>
+                                        <span class="message-heading">Hot Messages</span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell-o" aria-hidden="true"></i> <span class="active-status"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- Top Notifications Area -->
+                                <div class="top-notifications-area">
+                                    <!-- Heading -->
+                                    <div class="notifications-heading">
+                                        <div class="heading-title">
+                                            <h6>Notifications</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="notifications-box" id="notificationsBox">
+                                        <a href="#" class="dropdown-item">
+                                            <img src="img/member-img/1.png" alt="">
+                                            <span class="message-text">
+                                                <span>New Feature: HTTP Method Selection</span>
+                                                <span>56 min ago</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <img src="img/member-img/2.png" alt="">
+                                            <span class="message-text">
+                                                <span>Andrew Done Project</span>
+                                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, quam.</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown show" aria-haspopup="true" aria-expanded="false"><img src="img/member-img/4.png" alt=""></button>
+                            <div class="dropdown-menu header-profile dropdown-menu-right">
+                                <!-- User Profile Area -->
+                                <div class="user-profile-area">
+                                    <a href="#" class="dropdown-item"><i class="zmdi zmdi-account profile-icon" aria-hidden="true"></i> My profile</a>
+                                    <a href="#" class="dropdown-item"><i class="zmdi zmdi-email-open profile-icon" aria-hidden="true"></i> Messages</a>
+                                    <a href="#" class="dropdown-item"><i class="zmdi zmdi-brightness-7 profile-icon" aria-hidden="true"></i> Account settings</a>
+                                    <a href="#" class="dropdown-item"><i class="ti-unlink profile-icon" aria-hidden="true"></i> Sign-out</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-xl-8">
+                            <div class="card box-margin">
+                                <div class="card-body">
+                                    <div class="app-search1">
+                                        <form role="search" class=""><input type="text" placeholder="Search Shippment via Drop NUmber" class="form-control"> <button type="submit" class="mr-0"><i class="fa fa-search"></i></button></form>
+                                    </div>
+                                </div>
+                                <!--end card-body-->
+                            </div>
+                            <!--end card-->
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card ">
+                                <div class="card-body">
+                                    <form class="">
+                                        <button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"> Create A drop Alert</button>
+                                    </form>
+                                </div>
+                                <!--end card-body-->
+                            </div>
+                            <!--end card-->
+                        </div>
+                        <!--end col-->
+                        <div class="col-md-12 col-xl-12">
+                            <div class="card box-margin">
+                                <div class="card-body">
+                                    <div class="text-center"><i class="fa fa-bar-chart-o font-30"></i><h5>Track Shippments</h5></div>
+                                    <div class="">
+                                        <article class="card">
+                                            <header class="card-header"> My Shippment / Tracking </header>
+                                            <div class="card-body">
+                                                <h6>Shippment ID: OD45345345435</h6>
+                                                <article class="card">
+                                                    <div class="card-body row">
+                                                        <div class="col"> <strong>Estimated Delivery time:</strong> <br>29 nov 2019 </div>
+                                                        <div class="col"> <strong>Shipping BY:</strong> <br> BLUEDART, | <i class="fa fa-phone"></i> +1598675986 </div>
+                                                        <div class="col"> <strong>Status:</strong> <br> Picked by the courier </div>
+                                                        <div class="col"> <strong>Tracking #:</strong> <br> BD045903594059 </div>
+                                                    </div>
+                                                </article>
+                                                <div class="track">
+                                                    <div class="step active"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">Order confirmed</span> </div>
+                                                    <div class="step active"> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text"> Picked by courier</span> </div>
+                                                    <div class="step active"> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
+                                                    <div class="step active"> <span class="icon"> <i class="fa fa-inbox"></i> </span> <span class="text">Ready for pickup</span> </div>
+                                                </div>
+                                                <hr>
+                                            </div>
+                                        </article>
+                                     </div>
+                                </div>
+                                <!--end card-body-->
+                            </div>
+                            <!--end card-->
+                        </div>
+                        <!--end col-->
+                        <div class="col-xl-12 bg-gray mb-30">
+                            <div class="card">
+                                <div class="card-body row">
+                                    <div class="col-xl-7 col-sm-12" style="border: 4px solid #d6d8d7;">
+                                        <h3 class="text-center">Shipping Address</h3>
+                                        <p class="text-center">Click to view shipping addresses</p>
+                                        <div class="text-center">
+                                            <button class=" btn btn-info ship-address mr-2" data-toggle="modal" data-target="#exampleModalCenter"><div class="express">
+                                                <span><i class="fa fa-plane plane"></i></span>
+                                                <p class="text-white">Express</p>
+                                                <p class="text-white">Air freight</p>
+                                                <p class="text-white">1 to 2 business days after items are delivered to our warehouse</p>
+                                            </div></button>
+                                            <button class="inline btn btn-warning ship-address mr-2" data-toggle="modal" data-target="#exampleModalCenter2"><div class="express">
+                                                <span><i class="fa fa-plane plane"></i></span>
+                                                <p class="text-white">Express</p>
+                                                <p class="text-white">Tandard</p>
+                                                <p class="text-white">2 to 5 business days after items are delivered to our warehouse</p>
+                                            </div></button>
+                                            <button class="inline btn btn-dark ship-address" data-toggle="modal" data-target="#exampleModalCenter3"><div class="express">
+                                                <span><i class="fa fa-plane plane"></i></span>
+                                                <p class="text-white">Sea Freight</p>
+                                                <p class="text-white">Air freight</p>
+                                                <p class="text-white">2 to 4 weeks after items are delivered to our warehouse</p>
+                                            </div></button>
+                                        </div>
+                                        <p class="text-center mt-3">Please note: All packages will be handled as  Airdrop Standard <br>
+                                            unless identified otherwise in address line 2.</p>
+                                    </div>
+                                    <div class="col-xl-5 mt-3">
+                                        <div class="form-line">
+                                            <form class="line">
+                                                <h3 class="text-center calculator p-3">Shipping Calculator</h3>
+                                                <div class="row">
+                                                    <div class="col-md-12 form-group">
+                                                        <label class="">Shipping Method</label>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">Standard</option>
+                                                            <option>Sea Drop</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class=" col-md-6 form-group">
+                                                        <label for="exampleInputEmail12">Number Of Packages</label>
+                                                        <input type="email" class="form-control" id="exampleInputEmail12" placeholder="Enter email">
+                                                    </div>
+                                                    <div class="col-md-6 form-group">
+                                                        <label for="exampleInputPassword11">Invoice Amount USD</label>
+                                                        <input type="text" class="form-control"  placeholder="">
+                                                    </div>
+                                                    <div class="col-md-6 form-group">
+                                                        <label for="">Select  Weight</label>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">LBS</option>
+                                                            <option>KG</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 form-group">
+                                                        <label for="exampleInput11">Weight (lbs)</label>
+                                                        <input type="text" class="form-control"  placeholder="">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <button type="submit" class="btn btn-block btn-danger "><i class="fa fa-calculator"></i>Calculate</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end card-->
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="card mb-30">
+                                <div class="card-body bg-gradient-dark">
+                                    <img class="mb-20" src="img/bg-img/icon-6.png" alt="">
+                                    <p class="text-danger font-weight-bold font-17 mb-10">Solutions</p>
+                                    <h2 class="text-success font-28">Work Process.</h2>
+                                    <p class="mb-0 text-white">We put your ideas and thus your wishes in the form of a unique web project.</p>
+                                    <a class="btn btn-light btn-sm mt-20" href="#">Contac Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Area -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Footer Area -->
+                            <footer class="footer-area d-flex align-items-center flex-wrap">
+                                <!-- Copywrite Text -->
+                                <div class="copywrite-text">
+                                    <p> <a>© 2021. All rights Reserved</a></p>
+                                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                        Launch demo modal
+                                      </button> -->
+                                </div>
+                                <!-- Footer Nav -->
+                               
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <p class="text-center"><i class="fa fa-plane plane-modal"></i></p>
+                    <h2 class="text-center">Express</h2>
+                    <p class="text1">Air Freight</p> <hr style="border: 1px solid #17a2b8;">
+                   <p style="background-color: #F8FCFF; color: #17a2b8 ; padding: 100px; border: 2px solid #17a2b8;"><span>
+                    Coming Soon
+                   </span></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- modal -->
+    <!-- 1 -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="md-content">
+                <div class="">
+                    <p class="text-center"><i class="fa fa-plane plane-modal"></i></p>
+                    <h2 class="text-center">Express</h2>
+                    <p class="text1">Air Freight</p> <hr style="border: 1px solid #17a2b8;">
+                   <p style="background-color: #F8FCFF; color: #17a2b8 ; padding: 100px; border: 2px solid #17a2b8;"><span>
+                    Coming Soon
+                   </span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"  aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="md-content">
+                <div class="">
+                    <a href class=" md-close mt-2 float-right"> X</a>
+                    <p class="text-center"><i class="fa fa-plane plane-modal"></i></p>
+                    <h2 class="text-center">Standard</h2>
+                    <p class="text1">Air Freight</p> 
+                    <p class="text-center">2 to 5 business days after items are
+                     delivered to our warehouse.
+                    </p>
+                    <p class="text-center" style="font-size: 12px;">Please ship your items with the following information</p>
+                    <hr style="border: 1px solid #17a2b8;">
+                   
+                    <div>
+                        <table class="table table-hover">
+                           
+                            <tbody>
+                              <tr>
+                                <th scope="row">Full Name</th>
+                                <td colspan="3">Mark Davidson</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Address Line 1</th>
+                                <td colspan="3">6175 NW 167th Street, Unit G36</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Address Line 2</th>
+                                <td colspan="3">AIR – 4919</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">City</th>
+                                <td colspan="3">Hialeah</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Zip Code</th>
+                                <td colspan="3">Florida</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Zip Code</th>
+                                <td colspan="3">33015</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p class="text-center">
+                            Please note: All packages will be handled as Airdrop Standard
+                            unless identified otherwise in address line 2.
+                          </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- modal 3 -->
+    <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog"  aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="md-content">
+                <div class="">
+                    <a href class=" md-close mt-2 float-right"> X</a>
+                    <p class="text-center"><i class="fa fa-plane plane-modal"></i></p>
+                    <h2 class="text-center">Sea Drop </h2>
+                    <p class="text1">Sea Freight</p> 
+                    <p class="text-center">2 to 5 business days after items are
+                    delivered to our warehouse.
+                    </p>
+                    <p class="text-center" style="font-size: 12px;">Please ship your items with the following information</p>
+                    <hr style="border: 1px solid #17a2b8;">
+                
+                    <div>
+                        <table class="table table-hover">
+                        
+                            <tbody>
+                            <tr>
+                                <th scope="row">Full Name</th>
+                                <td colspan="3">Mark Davidson</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Address Line 1</th>
+                                <td colspan="3">6175 NW 167th Street, Unit G36</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Address Line 2</th>
+                                <td colspan="3">AIR – 4919</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">City</th>
+                                <td colspan="3">Hialeah</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Zip Code</th>
+                                <td colspan="3">Florida</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Zip Code</th>
+                                <td colspan="3">33015</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-center">
+                            Please note: All packages will be handled as Airdrop Standard
+                            unless identified otherwise in address line 2.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- /modal -->
+
+   <!-- Drop Alert Modal -->
+
+   
+
+   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-lg">
+       <div class="modal-content">
+         <form action="" class="p-20">
+             <h3 class="text1">Create a DropAlert for packages on their way to our Florida warehouse</h3>
+            <div class="form-row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputAddress" class="col-form-label">Courier Number</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="insert the courier number ">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress" class="col-form-label">Shipping Method</label>
+                        <select class="form-control" name="" id="">
+                            <option value="">Choose Option</option>
+                            <option value="">Air</option>
+                            <option value="">Option</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress" class="col-form-label">Shipping/Merchant</label>
+                        <select class="form-control" name="" id="">
+                            <option value="">Choose Option</option>
+                            <option value="">Air</option>
+                            <option value="">Option</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress" class="col-form-label">Courier company</label>
+                        <select class="form-control" name="" id="">
+                            <option value="">Choose Option</option>
+                            <option value="">Air</option>
+                            <option value="">Option</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="validationCustomUsername">Package USD</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">$</span>
+                            </div>
+                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="0.00" aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress" class="col-form-label">Courier company</label>
+                        <textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p>Copy and paste your invoice, or select the file with your invoice using the browse button.</p>
+                </div>
+            </div>
+            </div>
+         </form>
+       </div>
+     </div>
+   </div>
+
+    <!-- ======================================
+    ********* Page Wrapper Area End ***********
+    ======================================= -->
+
+    <!-- Must needed plugins to the run this Template -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bundle.js"></script>
+    <script src="js/default-assets/setting.js"></script>
+    <script src="js/default-assets/fullscreen.js"></script>
+
+    <!-- Active JS -->
+    <script src="js/default-assets/active.js"></script>
+
+  
+
+    
+    <!-- wizard script -->
+
+</body>
+
+
+<!-- Mirrored from demo.riktheme.com/antina-v2/minimalistic/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Oct 2021 10:20:34 GMT -->
+</html>

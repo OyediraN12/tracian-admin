@@ -1,0 +1,133 @@
+.container12{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    border:3px solid black;
+}
+.brand-section{
+   background-color: #fff;
+   padding: 10px 40px;
+}
+.logo{
+    width: 40%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-16{
+    width: 400px;
+}
+.text-white{
+    color: #fff;
+}
+.company-details{
+    float: right;
+    text-align: right;
+}
+.body-section{
+    padding: 0px;
+    border-bottom: 2px solid black;
+}
+.heading{
+    font-size: 20px;
+    margin-bottom: 08px;
+}
+
+.bold{
+    font-weight: bolder;
+}
+.center{
+    text-align: center;
+}
+
+
+.right2{
+    margin-left: 50px
+}
+.right1{
+   margin-left: 55px;
+}
+.right3{
+    margin-left: 35px;
+}
+.left1{
+    margin-right: 20px;
+}
+.col-right{
+    margin-left: 50px;
+}
+.vertical-line{
+    border-right: 3px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0px;
+
+}
+.vertical-2{
+    border-bottom: 2px solid black;
+}
+.pd-10{
+    padding: 5px;
+}
+.bold{
+    font-size: 20px;
+    font-weight: bold;
+}
+.priority{
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+/* fp -first */
+.fp{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* package details */
+.pe{
+    text-align: end;
+    font-size: 20PX;
+    padding: 10px;
+    font-weight: bold;
+}
+.le{
+    font-size: 20px;
+    padding: 20px;
+    font-weight: bold;
+}
+.details{
+    text-align: end;
+    padding: 2px;
+}
+.section-2{
+    border-bottom:2px ;
+}
+.pe-details{
+    border-bottom: 2px solid ;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    padding: 2px;
+}
+.text{
+    font-size: 32px;
+}
+.text2{
+    font-size: 17px;
+}
+
+@media print {
+    .no-print {
+      display: none;
+    }
+    .container12{
+        width: ;
+    }
+  }
