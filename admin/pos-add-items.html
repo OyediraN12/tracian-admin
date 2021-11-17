@@ -2,7 +2,6 @@
 <html lang="en">
 
 
-<!-- Mirrored from demo.riktheme.com/antina-v2/minimalistic/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Oct 2021 10:20:34 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -19,10 +18,6 @@
     <!-- Master Stylesheet [If you remove this CSS file, your file will be broken undoubtedly.] -->
     <link rel="stylesheet" href="style.css">
     <style>
-        .red-as{
-            color: red;
-            font-size: 12px;
-        }
         .bold{
             font-weight: bolder;
         }
@@ -193,6 +188,23 @@
                                     <li><a href="crm-contact.html"> <i class="fa fa-file-text-o"></i>Package Reporting</a></li>
                                     <li><a href="crm-contact.html"> <i class="fa fa-edit"></i>Update Package Account</a></li>
                                     <li><a href="crm-contact.html"> <i class="fa fa-trash"></i>Delete Packages</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="index.html"><i class="fa fa-address-book-o"></i> <span>Client Center</span></a></li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)"><i class="fa fa-user"></i> <span>Employees</span> <i class="fa fa-angle-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="analytic-customer.html"><i class="fa fa-user-plus"></i>Add New Employees</a></li>
+                                    <li><a href="analytic-report.html"><i class="fa fa-vcard-o"></i>Manage Employees</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="index.html"><i class="fa fa-th"></i> <span>Roles</span></a></li>
+                            
+                            <li class="treeview">
+                                <a href="javascript:void(0)"><i class="fa fa-credit-card"></i> <span>Billing Module</span> <i class="fa fa-angle-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="a"><i class="fa fa-user-plus"></i>Billing Rate</a></li>
+                                    <li><a href="analytic-report.html"><i class="fa fa-vcard-o"></i>Package Billing</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -398,240 +410,42 @@
             <!-- Main Content Area -->
             <div class="main-content">
                 <div class="container-fluid">
-                    <div class="card">
+                    <!-- MultiStep Form -->
+                    <div class="card create mb-30">
+                        <div class="card-header">
+                            Add POS Item
+                        </div>
                         <div class="card-body">
-                            <form>
-                                <h3>Air Package details</h3> <p class="badge badge-info badge-pill">0001</p>
-                                <div class="form-row pd-3">
-                                    <div class="form-group col-md-12">
-                                        <label class="col-form-label bold">Courier Tracking No</label>
-                                        <input type="text" class="form-control" disabled >
+                            <div class="col-md-12">
+                                <for class="p-4"> 
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label for="inputEmail4" class="col-form-label">Invoice No</label>
+                                            <input type="email" class="form-control" id="inputEmail4" disabled value="inv00001">
+                                        </div>
+                                        
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Customer Account Number</label>
-                                        <input type="text" class="form-control" disabled >
-                                         <a href="" class="badge badge-success">History</a>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Consignee</label>
-                                        <input type="text" class="form-control" disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Courier company</label>
-                                        <input type="text" class="form-control" >
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Shipper/Merchant</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Remarks</label>
-                                        <input type="email" class="form-control" >
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Package Description</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Number Of Pieces</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Package Value(USD)</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Actual Weight (LBS)</label>
-                                        <input type="text" class="form-control" id="lbs" onkeyup="mult(this.value);">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Actual Weight (KG)</label>
-                                        <input type="text" class="form-control" id="kg" disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Total Weight (LBS)</label>
-                                        <input type="text" class="form-control" id="lbs2"  disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">File upload</label>
-                                        <input type="file" name="img[]" class="file-upload-default">
-                                        <div class="input-group col-xs-12">
-                                            <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
-                                            <span class="input-group-append">
-                                                <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                                            </span>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="" class="col-form-label">Description</label>
+                                            <input type="text" class="form-control" id="" placeholder="Enter Description">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4" class="col-form-label">Delivery Status</label>
+                                            <select name="" id="" class="form-control">
+                                                <option>Ready For Pick Up</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="form-group col-md-12">
-                                        <label class="col-form-label bold">Copy And Paste Invoice/ Document</label>
-                                        <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+    
+                                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                        <a href="" class="btn btn-primary mt-3 mt-sm-0 " style="text-decoration: none; color: #fff;">Create Item</a>
                                     </div>
-                                    <a href="create-pakage=id2.html" class="btn btn-success mb-2 mr-2">Save Changes</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>  
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <p class="badge badge-warning badge-pill">Tracking Number / label fields</p>
-                            <form action="">
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Tracking Id</label>
-                                    <input type="text" class="form-control" disabled >
-                                </div>
-                               
+                                </form>
                             </div>
-                            </form>
                         </div>
-                    </div> 
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <p class="badge badge-warning badge-pill">Payment Status </p>
-                            <form action="">
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Payment Status</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Paid</option>
-                                        <option value="">Not paid</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                 <h3 class="badge badge-warning badge-pill">shippment details</h3>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Cosignee</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Date Packaged Received</label>
-                                    <input type="date" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Arrival Date</label>
-                                    <input type="date" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Shipped By</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Courier phone</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Package Status</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Order Confirmed</option>
-                                        <option value="">Picked By Courier</option>
-                                        <option value="">On the way</option>
-                                        <option value="">Ready For Pick Up</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                    <a href="" class="btn btn-success mb-2 mr-2">Save Changes</a>
-                                </div>
-                            </div>
-                            </form>
-                        </div>
-                    </div> 
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <p class="badge badge-info badge-pill">Fees / Additional Fees </p>
-                            <form action="">
-                            <div class="form-row">
-                                <h6>Shipping charges</h6>
-                                <div class="col-md-12">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Package Weight</label>
-                                    <input type="text" class="form-control" placeholder="4.5lbs" disabled>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Rate fee</label>
-                                    <input type="text" class="form-control" placeholder="$14.00">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Insurance fee</label>
-                                    <input type="text" class="form-control" placeholder="$1.50">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Fuel fee</label>
-                                    <input type="text" class="form-control" value="$1.00" >
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Shipping Total</label>
-                                    <input type="text" class="form-control" value="$16.50"  disabled>
-                                </div>
-                                <hr>
-                                
-                                <div class="col-12">
-                                    <h6 style="color: #007bff;">CIF Value </h6>
-                                </div>
-
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Cost Of package</label>
-                                    <input type="text" class="form-control" placeholder="$100">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Insurance</label>
-                                    <input type="text" class="form-control" placeholder="$1.50">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Freight</label>
-                                    <input type="text" class="form-control" placeholder="14.0">
-                                </div>
-                                <div class="form-group col-md-3">
-                                  <label class="col-form-label bold">CIF Total</label>
-                                  <input type="text" class="form-control" placeholder="$118.5" disabled>
-                                </div>
-                                
-
-                                <div class="col-12"> <h5>Taxes</h5>
-                                    <p class="red-as">Shipping taxes</p> 
-                                </div>
-                                 <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% ID</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% GCT</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% SCF</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% ENVL</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">STAMP</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Estimated Duty fee</label>
-                                    <input type="text" class="form-control" value="$45.00" disabled>
-                                </div>
-                                <div class="col-12"> <h5>Gross Total</h5>
-                                    <p class="red-as">%tax of Sumtotal</p> 
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Gross Total</label>
-                                    <input type="text" class="form-control" placeholder="$54"disabled >
-                                </div>
-                                
-                             
-                                <div class="col-md-12">
-                                    <a href="" class="btn btn-success mb-2 mr-2">Save Changes</a>
-                                </div>
-                            </div>
-                            </form>
-                        </div>
-                    </div> 
-                 <div class="height-200"></div>
+                    </div>
+                    <div class="height-300"></div>
                 </div>
 
                 <!-- Footer Area -->
@@ -669,19 +483,6 @@
     <script src="js/bundle.js"></script>
     <script src="js/default-assets/setting.js"></script>
     <script src="js/default-assets/fullscreen.js"></script>
-    <script>
-
-        function mult(value){
-            var x, y ;
-            x = 1.00 * value
-            y = 0.453 * value;
-            z=  1 * value
-            document.getElementById('lbs').value = x;
-            document.getElementById('kg').value = y;
-            document.getElementById('lbs2').value = z;
-        }
-
-    </script>
 
     <!-- Active JS -->
     <script src="js/default-assets/active.js"></script>
@@ -757,15 +558,7 @@ return false;
 
 });
     </script>
-    <script>
-        function calc(){
-            var n1 = document.getElementById()
-        }
-    </script>
-
 
 </body>
 
-
-<!-- Mirrored from demo.riktheme.com/antina-v2/minimalistic/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Oct 2021 10:20:34 GMT -->
 </html>

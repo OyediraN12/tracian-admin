@@ -24,7 +24,7 @@
             font-size: 12px;
         }
         .bold{
-            font-weight: bolder;
+            
         }
          .create .social-area {
      text-align: center;
@@ -164,8 +164,8 @@
                             <li class="treeview active">
                                 <a href="javascript:void(0)"><i class="fa fa-space-shuttle"></i> <span>Quick Links</span> <i class="fa fa-angle-right"></i></a>
                                 <ul class="treeview-menu">
-                                    <li class="active"><a href="calendar.html">+ Create Container</a></li>
-                                    <li><a href="widgets.html">+ Create Package</a></li>
+                                    <li class=""><a href="calendar.html">+ Create Container</a></li>
+                                    <li class="active"><a href="widgets.html">+ Create Package</a></li>
                                     <li><a href="chat-box.html">+ Create Droplet</a></li>
                                     <li><a href="timeline.html"><i class="fa fa-cubes"></i>Manage Containers</a></li>
                                     <li><a href="timeline.html"><i class="fa fa-cube"></i> Package Management</a></li>
@@ -398,240 +398,99 @@
             <!-- Main Content Area -->
             <div class="main-content">
                 <div class="container-fluid">
-                    <div class="card">
+                    <!-- MultiStep Form -->
+                    <div class="card create  mb-30">
                         <div class="card-body">
-                            <form>
-                                <h3>Air Package details</h3> <p class="badge badge-info badge-pill">0001</p>
-                                <div class="form-row pd-3">
-                                    <div class="form-group col-md-12">
-                                        <label class="col-form-label bold">Courier Tracking No</label>
-                                        <input type="text" class="form-control" disabled >
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Customer Account Number</label>
-                                        <input type="text" class="form-control" disabled >
-                                         <a href="" class="badge badge-success">History</a>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Consignee</label>
-                                        <input type="text" class="form-control" disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Courier company</label>
-                                        <input type="text" class="form-control" >
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Shipper/Merchant</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Remarks</label>
-                                        <input type="email" class="form-control" >
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Package Description</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Number Of Pieces</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Package Value(USD)</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Actual Weight (LBS)</label>
-                                        <input type="text" class="form-control" id="lbs" onkeyup="mult(this.value);">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Actual Weight (KG)</label>
-                                        <input type="text" class="form-control" id="kg" disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Total Weight (LBS)</label>
-                                        <input type="text" class="form-control" id="lbs2"  disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">File upload</label>
-                                        <input type="file" name="img[]" class="file-upload-default">
-                                        <div class="input-group col-xs-12">
-                                            <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
-                                            <span class="input-group-append">
-                                                <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                                            </span>
+                            <form action="">
+                                <div class="form-group col-md-12 mt-4">
+                                    <label class="col-form-label">Enter Account Number <span class="red-as">*</span></label>
+                                    <input type="email" class="form-control"  placeholder="Enter Account Number">
+                                </div>
+                            </form>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation"> <a class="nav-link active" id="air-tab" data-toggle="tab" href="#air" role="tab" aria-controls="air" aria-selected="true">Add Debit</a> </li>
+                                <li class="nav-item" role="presentation"> <a class="nav-link" id="sea-drop-tab" data-toggle="tab" href="#sea-drop" role="tab" aria-controls="sea-drop" aria-selected="false">Add Credit</a> </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="air" role="tabpanel" aria-labelledby="air-tab">
+                                    <form class="mt-4">
+                                        <div class="form-row pd-3">
+                                            
+                                            <div class="form-group col-md-12">
+                                                <label class="col-form-label bold">Purpose For Debit</label>
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">online shopping</option>
+                                                    <option value="">delivery fee</option>
+                                                    <option value="">mail</option>
+                                                    <option value="">storage</option>
+                                                    <option value="">others</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="col-form-label bold">Reason for Debit</label>
+                                                <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                                            </div>
+                                            
+                                            <div class="form-group col-md-12">
+                                                <label class="col-form-label bold">Add Debit Amount</label>
+                                                <input type="text" name="img[]" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="col-form-label bold">Delivery Status</label>
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">Ready For Pick Up</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <div class="col-md-12">
+                                                <button class="btn btn-warning">Add Debit</button>
+                                                <button class="btn btn-primary">Confirm Debit</button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label class="col-form-label bold">Copy And Paste Invoice/ Document</label>
-                                        <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
-                                    </div>
-                                    <a href="create-pakage=id2.html" class="btn btn-success mb-2 mr-2">Save Changes</a>
+                                    </form>
                                 </div>
-                            </form>
-                        </div>
-                    </div>  
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <p class="badge badge-warning badge-pill">Tracking Number / label fields</p>
-                            <form action="">
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Tracking Id</label>
-                                    <input type="text" class="form-control" disabled >
-                                </div>
-                               
-                            </div>
-                            </form>
-                        </div>
-                    </div> 
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <p class="badge badge-warning badge-pill">Payment Status </p>
-                            <form action="">
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Payment Status</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Paid</option>
-                                        <option value="">Not paid</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                 <h3 class="badge badge-warning badge-pill">shippment details</h3>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Cosignee</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Date Packaged Received</label>
-                                    <input type="date" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Arrival Date</label>
-                                    <input type="date" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Shipped By</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Courier phone</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Package Status</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Order Confirmed</option>
-                                        <option value="">Picked By Courier</option>
-                                        <option value="">On the way</option>
-                                        <option value="">Ready For Pick Up</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                    <a href="" class="btn btn-success mb-2 mr-2">Save Changes</a>
-                                </div>
-                            </div>
-                            </form>
-                        </div>
-                    </div> 
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <p class="badge badge-info badge-pill">Fees / Additional Fees </p>
-                            <form action="">
-                            <div class="form-row">
-                                <h6>Shipping charges</h6>
-                                <div class="col-md-12">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Package Weight</label>
-                                    <input type="text" class="form-control" placeholder="4.5lbs" disabled>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Rate fee</label>
-                                    <input type="text" class="form-control" placeholder="$14.00">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Insurance fee</label>
-                                    <input type="text" class="form-control" placeholder="$1.50">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Fuel fee</label>
-                                    <input type="text" class="form-control" value="$1.00" >
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Shipping Total</label>
-                                    <input type="text" class="form-control" value="$16.50"  disabled>
-                                </div>
-                                <hr>
-                                
-                                <div class="col-12">
-                                    <h6 style="color: #007bff;">CIF Value </h6>
-                                </div>
+                                <div class="tab-pane fade" id="sea-drop" role="tabpanel" aria-labelledby="sea-drop-tab">
+                                    <form class="mt-4">
+                                        <div class="form-row pd-3">
+                                            
+                                            <div class="form-group col-md-12">
+                                                <label class="col-form-label bold">Purpose For Debit</label>
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">online shopping</option>
+                                                    <option value="">delivery fee</option>
+                                                    <option value="">mail</option>
+                                                    <option value="">storage</option>
+                                                    <option value="">others</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label class="col-form-label bold">Reason for Credit</label>
+                                                <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                                            </div>
+                                            
+                                            <div class="form-group col-md-12">
+                                                <label class="col-form-label bold">Add Credit Amount</label>
+                                                <input type="text" name="img[]" class="form-control">
+                                            </div>
+                                            
+                                            <div class="form-group col-md-12">
+                                                <label class="col-form-label bold">Delivery Status</label>
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">Ready For Pick Up</option>
+                                                </select>
+                                            </div>
 
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Cost Of package</label>
-                                    <input type="text" class="form-control" placeholder="$100">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Insurance</label>
-                                    <input type="text" class="form-control" placeholder="$1.50">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Freight</label>
-                                    <input type="text" class="form-control" placeholder="14.0">
-                                </div>
-                                <div class="form-group col-md-3">
-                                  <label class="col-form-label bold">CIF Total</label>
-                                  <input type="text" class="form-control" placeholder="$118.5" disabled>
-                                </div>
-                                
-
-                                <div class="col-12"> <h5>Taxes</h5>
-                                    <p class="red-as">Shipping taxes</p> 
-                                </div>
-                                 <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% ID</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% GCT</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% SCF</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% ENVL</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">STAMP</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Estimated Duty fee</label>
-                                    <input type="text" class="form-control" value="$45.00" disabled>
-                                </div>
-                                <div class="col-12"> <h5>Gross Total</h5>
-                                    <p class="red-as">%tax of Sumtotal</p> 
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Gross Total</label>
-                                    <input type="text" class="form-control" placeholder="$54"disabled >
-                                </div>
-                                
-                             
-                                <div class="col-md-12">
-                                    <a href="" class="btn btn-success mb-2 mr-2">Save Changes</a>
+                                            <div class="col-md-12">
+                                                <button class="btn btn-warning">Add Credit</button>
+                                                <button class="btn btn-primary">Confirm Credit</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                            </form>
                         </div>
-                    </div> 
-                 <div class="height-200"></div>
+                    </div>
+                    <div class="height-100"></div>
                 </div>
 
                 <!-- Footer Area -->
@@ -669,6 +528,13 @@
     <script src="js/bundle.js"></script>
     <script src="js/default-assets/setting.js"></script>
     <script src="js/default-assets/fullscreen.js"></script>
+
+    <!-- Active JS -->
+    <script src="js/default-assets/active.js"></script>
+    <script src="js/default-assets/file-upload.js"></script>
+    <script src="js/default-assets/basic-form.js"></script>
+
+    <!-- conversion script -->
     <script>
 
         function mult(value){
@@ -681,91 +547,55 @@
             document.getElementById('lbs2').value = z;
         }
 
+        
     </script>
 
-    <!-- Active JS -->
-    <script src="js/default-assets/active.js"></script>
+     <script>
+
+   function new2(value){
+       var a, b, c, z;
+       a = document.getElementById("lgth").value;
+       b = document.getElementById("wdth").value;
+       c = document.getElementById("hght").value;
+       l = a*b*c;
+       document.getElementById('vol').value = l;
+   }
+
+        
+    </script>
+      <script>
+
+        function sea(value){
+            var q, r, s, t;
+            q = document.getElementById("lgth1").value;
+            r = document.getElementById("wdth1").value;
+            s = document.getElementById("hght1").value;
+            t = q*r*s;
+            document.getElementById('vol1').value = t;
+        }
+     
+             
+          </script>
+          
+          <script>
+
+            function express(value){
+                var e, f ;
+                e = 1.00 * value
+                f = 0.453 * value;
+                g=  1 * value
+                document.getElementById('wdth2').value = e;
+                document.getElementById('awtdth2').value = f;
+                document.getElementById('dwdth2').value = g;
+                document.getElementById('twdth2').value = f;
+            }
+    
+            
+         </script>
+
     
     <!-- wizard script -->
-    <script>
-        $(document).ready(function(){
-
-var current_fs, next_fs, previous_fs; //fieldsets
-var opacity;
-
-$(".next").click(function(){
-
-current_fs = $(this).parent();
-next_fs = $(this).parent().next();
-
-//Add Class Active
-$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
-//show the next fieldset
-next_fs.show();
-//hide the current fieldset with style
-current_fs.animate({opacity: 0}, {
-step: function(now) {
-// for making fielset appear animation
-opacity = 1 - now;
-
-current_fs.css({
-'display': 'none',
-'position': 'relative'
-});
-next_fs.css({'opacity': opacity});
-},
-duration: 600
-});
-});
-
-$(".previous").click(function(){
-
-current_fs = $(this).parent();
-previous_fs = $(this).parent().prev();
-
-//Remove class active
-$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-//show the previous fieldset
-previous_fs.show();
-
-//hide the current fieldset with style
-current_fs.animate({opacity: 0}, {
-step: function(now) {
-// for making fielset appear animation
-opacity = 1 - now;
-
-current_fs.css({
-'display': 'none',
-'position': 'relative'
-});
-previous_fs.css({'opacity': opacity});
-},
-duration: 600
-});
-});
-
-$('.radio-group .radio').click(function(){
-$(this).parent().find('.radio').removeClass('selected');
-$(this).addClass('selected');
-});
-
-$(".submit").click(function(){
-return false;
-})
-
-});
-    </script>
-    <script>
-        function calc(){
-            var n1 = document.getElementById()
-        }
-    </script>
-
 
 </body>
 
-
-<!-- Mirrored from demo.riktheme.com/antina-v2/minimalistic/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Oct 2021 10:20:34 GMT -->
 </html>
