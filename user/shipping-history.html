@@ -17,6 +17,10 @@
     <link rel="icon" href="img/core-img/favicon.png">
 
     <!-- These plugins only need for the run this page -->
+    <link rel="stylesheet" href="css/default-assets/datatables.bootstrap4.css">
+    <link rel="stylesheet" href="css/default-assets/responsive.bootstrap4.css">
+    <link rel="stylesheet" href="css/default-assets/buttons.bootstrap4.css">
+    <link rel="stylesheet" href="css/default-assets/select.bootstrap4.css">
     <link rel="stylesheet" href="css/default-assets/notification.css">
 
     <!-- Master Stylesheet [If you remove this CSS file, your file will be broken undoubtedly.] -->
@@ -433,112 +437,40 @@
                 <div class="col-12 box-margin height-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Edit Basic Informations</h4>
+                            <h4 class="card-title">Shipping History</h4>
                             <p class="card-description">
-                               Adjust your info details
+                               All Packages Listed Here
                             </p>
-                            <form class="forms-sample row">
-                                <div class="form-group col-md-6">
-                                    <label for="exampleInputName1">Full Name</label>
-                                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="exampleInputEmail3">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" readonly>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="exampleInputEmail3">Phone 1</label>
-                                    <input type="email" class="form-control" placeholder="767676">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="exampleInputEmail3">Phone 2</label>
-                                    <input type="email" class="form-control" placeholder="767676">
-                                </div>
-                                <div class="col-md-12 text-info mb-2"><h6>Address</h6></div>
-                                <div class="form-group col-md-6">
-                                    <label for="exampleInputEmail3">Phone 1</label>
-                                    <input type="email" class="form-control" placeholder="767676">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="exampleInputEmail3">Phone 2</label>
-                                    <input type="email" class="form-control" placeholder="767676">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="exampleInputEmail3">Street Number</label>
-                                    <input type="email" class="form-control" placeholder="767676">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="exampleInputEmail3">Street Name</label>
-                                    <input type="email" class="form-control" placeholder="767676">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="exampleInputEmail3">Providence</label>
-                                    <input type="email" class="form-control" placeholder="767676">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="exampleInputEmail3">City</label>
-                                    <input type="email" class="form-control" placeholder="767676">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <button class="btn btn-primary">Save Details</button>
-                                </div>
-                            </form>
+                            <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                                <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>Tracking Number</th>
+                                        <th>Description </th>
+                                        <th>Package Status</th>
+                                        <th>date / time</th>
+                                        <th>Payment Status</th>
+                                        <th>Service Type</th>
+                                        <th>Receipt View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>#rrrereed</td>
+                                        <td>cloths</td>
+                                        <td>Ready for Pick up</td>
+                                        <td>22/07/2021</td>
+                                        <td>Paid</td>
+                                        <th>Air</th>
+                                        <th><button class="btn btn-primary">View</button></th>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body"> 
-                            <h4 class="card-title">Upload Documents </h4>
-                            <form action="" class="forms-sample row">
-                                <div class="form-group col-md-6">
-                                    <label>Upload aN ID <span>passport / driver's licence Document</span></label>
-                                    <input type="file" name="img[]" class="file-upload-default">
-                                    <div class="input-group col-xs-12">
-                                        <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
-                                        <span class="input-group-append">
-                                            <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Upload Contract Document</label>
-                                    <input type="file" name="img[]" class="file-upload-default">
-                                    <div class="input-group col-xs-12">
-                                        <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
-                                        <span class="input-group-append">
-                                            <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Upload Custom Authorization form</span></label>
-                                    <input type="file" name="img[]" class="file-upload-default">
-                                    <div class="input-group col-xs-12">
-                                        <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
-                                        <span class="input-group-append">
-                                            <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Upload UPS Verification Document </label>
-                                    <input type="file" name="img[]" class="file-upload-default">
-                                    <div class="input-group col-xs-12">
-                                        <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
-                                        <span class="input-group-append">
-                                            <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                                        </span>
-                                    </div>
-                                </div>
-                            `<button class="col-md-12 btn btn-block btn-secondary">
-                             Submit Document!!
-                            </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="height-200"></div>
+                <div class="height-800"></div>
             </div>
         </div>
     </div>
@@ -558,11 +490,24 @@
 
     <!-- Active JS -->
     <script src="js/default-assets/active.js"></script>
+
+    <!-- These plugins only need for the run this page -->
+    <script src="js/default-assets/jquery.datatables.min.js"></script>
+    <script src="js/default-assets/datatables.bootstrap4.js"></script>
+    <script src="js/default-assets/datatable-responsive.min.js"></script>
+    <script src="js/default-assets/responsive.bootstrap4.min.js"></script>
+    <script src="js/default-assets/datatable-button.min.js"></script>
+    <script src="js/default-assets/button.bootstrap4.min.js"></script>
+    <script src="js/default-assets/button.html5.min.js"></script>
+    <script src="js/default-assets/button.flash.min.js"></script>
+    <script src="js/default-assets/button.print.min.js"></script>
+    <script src="js/default-assets/datatables.keytable.min.js"></script>
+    <script src="js/default-assets/datatables.select.min.js"></script>
+    <script src="js/default-assets/demo.datatable-init.js"></script>
     <script src="js/default-assets/bootstrap-growl.js"></script>
     <script src="js/default-assets/notification-active.js"></script>
 
 </body>
 
 
-<!-- Mirrored from demo.riktheme.com/antina-v2/top-menu/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Oct 2021 11:05:04 GMT -->
 </html>
