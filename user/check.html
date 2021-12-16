@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Show/Hide div on dropdown value change</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+	<form id="contForm" action="" method="">
+	<h3>Show/Hide div on dropdown value change</h3>
+		<h4>Do you have a passport? Kindly fill the details.</h4>
+		<fieldset>
+		<select name="passport" id="passport" class="passport">
+			<option value="" selected>-Select-</option>
+			<option value="Yes">Yes</option>
+			<option value="No">No</option>
+			</select>
+		</fieldset>
+		<div class="hidden" id="pDetails">
+		<fieldset>
+		<input type="text" name="passportNumber" required placeholder="Passport Number">
+		</fieldset>
+		<fieldset>
+		<input type="date" name="expiryDate" id="expiryDate" required >
+		</fieldset>
+			</div>
+		<fieldset>
+		<button name="submit" type="submit" id="contact-submit">Submit</button>
+		</fieldset>
+	</form>
+	</div>
+	
+	<script>
+	$('.passport').change(function(){
+		var responseID = $(this).val();
+		if(responseID =="Yes"){
+			$('#pDetails').removeClass("hidden");
+			$('#pDetails').addClass("show");
+		} else{
+			$('#pDetails').removeClass("show");
+			$('#pDetails').addClass("hidden");
+		}
+		console.log(responseID);
+	});
+	</script>
+	
+</body>
+</html>
