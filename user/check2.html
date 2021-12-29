@@ -10,25 +10,20 @@ href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <style>
-   #hideValuesOnSelect {
-      display: none;
-   }
+  
 </style>
 <body>
     <select>
 			   
-        <option id="select1">orderby</option> 
-        <option id="select1">__1</option> 
+        <option id="air">__1</option> 
         <option id="select2">__2</option>
         <option id="select3">__3</option>
 
         </select> 
 
 
-        <div class="select1 box" style="margin-top: 10px;">
-            <form action="">
-                <input type="text">
-            </form>
+        <div class="air box" style="margin-top: 10px;">
+           <div>klgjtngjkntgjkntgjk</div>
         </div>
         <div class="select2 box" >You have selected <strong>blue option</strong> so i am here</div>
         <div class="select3 box">You have selected <strong>black option</strong> so i am here</div>
@@ -37,9 +32,9 @@ href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
    $(document).ready(function(){
     $("select").change(function(){
         $(this).find("option:selected").each(function(){
-            if($(this).attr("id")=="select1"){
-                $(".box").not(".select1").hide();
-                $(".select1").show();
+            if($(this).attr("id")=="air"){
+                $(".box").not(".air").hide();
+                $(".air").show();
             }
             else if($(this).attr("id")=="select2"){
                 $(".box").not(".select2").hide();
