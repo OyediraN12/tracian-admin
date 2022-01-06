@@ -2,548 +2,740 @@
 <html lang="en">
 
 
-<!-- Mirrored from 7oroof.com/demos/logisti/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Jul 2021 01:34:25 GMT -->
+<!-- Mirrored from templates.thememodern.com/engitech/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 28 Dec 2021 21:03:10 GMT -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Logisti">
-  <link href="assets/images/favicon/favicon.png" rel="icon">
-  <title>Logisti</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:400,700%7cWork+Sans:400,600,700&amp;display=swap">
-  <link rel="stylesheet" href="assets/css/libraries.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Engitech</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/royal-preload.css" />
 </head>
 
-<body>
-  <div class="preloader">
-    <div class="loading"><span></span><span></span><span></span><span></span></div>
-  </div><!-- /.preloader -->
-  <div class="wrapper">
-    <!-- =========================
-        Header
-    =========================== -->
-    <header id="header" class="header header-transparent">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index-2.html">
-            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo">
-            <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
-          </a>
-          <button class="navbar-toggler" type="button">
-            <span class="menu-lines"><span></span></span>
-          </button>
-          <div class="header__top-right d-none d-lg-block">
-            <ul class="list-unstyled d-flex justify-content-end align-items-center">
-              <li><i class="icon-phone"></i><span>+55 654 541 17</span></li>
-              <li>
-                <div class="dropdown">
-                  <button class="btn dropdown-toggle width-auto" id="langDrobdown" data-toggle="dropdown">
-                    <i class="icon-map"></i><span>En</span>
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="langDrobdown">
-                    <a class="dropdown-item" href="#">Spain</a>
-                    <a class="dropdown-item" href="#">France</a>
-                  </div>
+<body class="royal_preloader">
+    <div id="page" class="site">
+        <header id="site-header" class="site-header header-style-2 header-fullwidth sticky-header header-static">
+            <!-- Main Header start -->
+            <div class="header-topbar">
+                <div class="octf-area-wrap">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="topbar-info">
+                                    <li><i class="fas fa-envelope"></i><a href="mailto:engitech@mail.net"> engitech@mail.net</a></li>
+                                    <li><i class="fas fa-clock"></i> Mon - Sat: 8.00 am - 7.00 pm</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <div class="topbar-right">
+                                    <ul class="extra-text">
+                                        <li>We are creative, ambitious and ready for challenges! <a href="contact.html">Hire Us</a></li>
+                                    </ul>
+                                    <ul class="social-list">
+                                        <li><a href="http://twitter.com/" target="_self"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="http://facebook.com/" target="_self"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="http://linkedin.com/" target="_self"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="http://instagram/" target="_self"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </li>
-              <li><a href="request-quote.html" class="btn btn__white"><i class="icon-list"></i><span>Request A
-                    Quote</span></a></li>
-            </ul>
-          </div><!-- /.header-top-right -->
-          <div class="collapse navbar-collapse" id="mainNavigation">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav__item with-dropdown">
-                <a href="index-2.html" class="dropdown-toggle nav__item-link active">Home</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="index-2.html" class="nav__item-link">Home Main</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="home-modern.html" class="nav__item-link">Home Moderm</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="home-classic.html" class="nav__item-link">Home classic</a></li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="about-us.html" class="nav__item-link">Company</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="about-us.html" class="nav__item-link">About Us</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="why-us.html" class="nav__item-link">Why Choose Us</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="leadership-team.html" class="nav__item-link">Leadership Team</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="global-locations.html" class="nav__item-link">Global Locations</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="gallery.html" class="nav__item-link">Our Gallery</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="careers.html" class="nav__item-link">careers</a></li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="services.html" class="nav__item-link">Services</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu wide-dropdown-menu">
-                  <li class="nav__item">
-                    <div class="row mx-0">
-                      <div class="col-sm-6 dropdown-menu-col">
-                        <h6>What We Do</h6>
-                        <ul class="nav flex-column">
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Warehousing</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Air Freight</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Ocean Freight</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Road Freight</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Supply Chain</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-service.html">Packaging</a></li>
-                          <!-- /.nav-item -->
-                        </ul>
-                      </div><!-- /.col-sm-6 -->
-                      <div class="col-sm-6 dropdown-menu-col">
-                        <h6>Who We Serve</h6>
-                        <ul class="nav flex-column">
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Retail &
-                              Consumer</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Sciences &
-                              Healthcare</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Industrial &
-                              Chemical</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Power
-                              Generation</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Food &
-                              Beverage</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Oil & Gas</a></li>
-                          <!-- /.nav-item -->
-                        </ul>
-                      </div><!-- /.col-sm-6 -->
-                    </div><!-- /.row -->
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item">
-                <a href="rates.html" class="nav__item-link">rates</a>
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="case-studies-grid.html" class="nav__item-link">case studies</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="case-studies-default.html" class="nav__item-link">case studies
-                      default</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="case-studies-grid.html" class="nav__item-link">case studies grid</a>
-                  </li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="case-studies-carousel.html" class="nav__item-link">case studies
-                      carousel</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="case-studies-single.html" class="nav__item-link">case study Single</a>
-                  </li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="blog-grid.html" class="nav__item-link">News & Media</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="blog-grid.html" class="nav__item-link">blog grid</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="blog-classic.html" class="nav__item-link">blog classic</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="blog-single-post.html" class="nav__item-link">blog single post</a></li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="#" class="nav__item-link">Features</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="request-quote.html" class="nav__item-link">request a quote</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="track-shipment.html" class="nav__item-link">track and trace</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="find-location.html" class="nav__item-link">find Location</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="faqs.html" class="nav__item-link">help and faqs</a></li>
-                  <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item">
-                <a href="contacs.html" class="nav__item-link">Contact Us</a>
-              </li><!-- /.nav-item -->
-            </ul><!-- /.navbar-nav -->
-          </div><!-- /.navbar-collapse -->
-          <div class="navbar-modules">
-            <div class="modules__wrapper d-flex align-items-center">
-              <a href="#" class="module__btn module__btn-search"><i class="fa fa-search"></i></a>
-            </div><!-- /.modules-wrapper -->
-          </div><!-- /.navbar-modules -->
-        </div><!-- /.container -->
-      </nav><!-- /.navabr -->
-    </header><!-- /.Header -->
+            </div>
+            <div class="octf-main-header">
+                <div class="octf-area-wrap">
+                    <div class="container-fluid octf-mainbar-container">
+                        <div class="octf-mainbar">
+                            <div class="octf-mainbar-row octf-row">
+                                <div class="octf-col logo-col">
+                                    <div id="site-logo" class="site-logo">
+                                        <a href="index.html">
+                                            <img src="images/logo.svg" alt="Engitech" class="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="octf-col menu-col">
+                                    <nav id="site-navigation" class="main-navigation">
+                                        <ul class="menu">
+                                            <li class="menu-item-has-children">
+                                                <a href="index.html">Home</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="index.html">Home 1</a></li>
+                                                    <li><a href="index-2.html">Home 2</a></li>
+                                                    <li><a href="index-3.html">Home 3</a></li>
+                                                    <li><a href="index-4.html">Home 4</a></li>
+                                                    <li><a href="index-5.html">Home 5</a></li>
+                                                    <li><a href="index-6.html">Home 6</a></li>
+                                                    <li><a href="index-7.html">Home 7</a></li>
+                                                    <li><a href="index-8.html">Home 8</a></li>
+                                                    <li><a href="index-9.html">Home 9</a></li>
+                                                    <li><a href="index-10.html">Home 10</a></li>
+                                                    <li><a href="index-11.html">Home 11</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children"><a href="#">Company</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="about-us.html">About us</a></li>
+                                                    <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                                                    <li><a href="our-team.html">Our team</a></li>
+                                                    <li><a href="single-team.html">Single team</a></li>
+                                                    <li class="menu-item-has-children"><a href="shop.html">Shop</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="single-product.html">Single Product</a></li>
+                                                            <li><a href="checkout-page.html">Checkout Page</a></li>
+                                                            <li><a href="cart-page.html">Cart Page</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="typography.html">Typography</a></li>
+                                                    <li><a href="elements.html">Elements</a></li>
+                                                    <li><a href="faq.html">FAQS</a></li>
+                                                    <li><a href="404-error.html">404 Error</a></li>
+                                                    <li><a href="cooming-soon.html">Coming Soon</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children"><a href="#">Services</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="it-services.html">It Services</a></li>
+                                                    <li><a href="web-development.html">Web Development</a></li>
+                                                    <li><a href="mobile-development.html">Mobile Development</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children"><a href="#">Projects</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
+                                                    <li><a href="portfolio-carousel.html">Portfolio Carousel</a></li>
+                                                    <li class="menu-item-has-children"><a href="portfolio-grid.html">Portfolio Grid</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="portfolio-grid.html">Portfolio 3 Columns</a></li>
+                                                            <li><a href="portfolio-4-column.html">Portfolio 4 Columns</a></li>
+                                                            <li><a href="portfolio-no-gap.html">Portfolio No Gap</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item-has-children"><a href="portfolio-details-1.html">Portfolio Details</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="portfolio-details-1.html">Single Layout 1</a></li>
+                                                            <li><a href="portfolio-details-2.html">Single Layout 2</a></li>
+                                                            <li><a href="portfolio-details-3.html">Single Layout 3</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children current-menu-item current-menu-ancestor"><a href="blog.html">Blog</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="blog.html">Blog Listing</a></li>
+                                                    <li class="current-menu-item"><a href="blog-grid.html">Blog Grid</a></li>
+                                                    <li><a href="post.html">Blog Single</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact.html">Contacts</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="octf-col cta-col text-right">
+                                <!-- Call To Action -->
+                                    <div class="octf-btn-cta">
 
-    <!-- ========================
-       page title 
-    =========================== -->
-    <section id="page-title" class="page-title bg-overlay bg-parallax">
-      <div class="bg-img"><img src="assets/images/page-titles/1.jpg" alt="background"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">News & Media</li>
-              </ol>
-            </nav>
-            <h1 class="pagetitle__heading">News & Media</h1>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.page-title -->
+                                        <div class="octf-header-module cart-btn-hover">
+                                            <div class="h-cart-btn octf-cta-icons">
+                                                <a class="cart-icon" href="cart-page.html"><i class="flaticon-shopper"></i><span class="count">0</span></a>
+                                            </div>  
+                                            <div class="site-header-cart">
+                                                <div class="widget woocommerce widget_shopping_cart">
+                                                    <div class="widget_shopping_cart_content">
+                                                        <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="octf-header-module">
+                                            <div class="toggle_search octf-cta-icons">
+                                                <i class="flaticon-search"></i>
+                                            </div>
+                                            <!-- Form Search on Header -->
+                                            <div class="h-search-form-field collapse">
+                                                <div class="h-search-form-inner">
+                                                    <form role="search" method="get" id="hsearch-form" class="search-form">
+                                                        <label><span class="screen-reader-text">Search for:</span>
+                                                        <input type="search" class="search-field" placeholder="Search …" value="" name="s"></label>
+                                                        <button type="submit" class="search-submit"><i class="flaticon-search"></i></button>
+                                                    </form>
+                                                </div>                                  
+                                            </div>
+                                        </div>
 
-    <!-- ======================
-      Blog Grid
-    ========================= -->
-    <section id="blogGrid" class="blog blog-grid">
-      <div class="container">
-        <div class="row">
-          <!-- Blog Item #1 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="blog-item">
-              <div class="blog__img">
-                <a href="#">
-                  <img src="assets/images/blog/grid/1.jpg" alt="blog image">
-                </a>
-              </div><!-- /.entry-img -->
-              <div class="blog__content">
-                <div class="blog__meta">
-                  <div class="blog__meta-cat">
-                    <a href="#">Insights</a><a href="#">Management</a>
-                  </div><!-- /.blog-meta-cat -->
-                  <span class="blog__meta-date">Jan 20, 2019</span>
-                </div><!-- /.blog-meta -->
-                <h4 class="blog__title"><a href="#">Importers achieve cost savings through the First Sale rule!</a></h4>
-                <p class="blog__desc">The trade war currently ensuing between the US and several nations around the
-                  globe, most fiercely with China, shows no signs of the first set of tariffs levied against solar...
-                </p>
-                <a href="#" class="btn btn__secondary btn__link">Read More</a>
-              </div><!-- /.entry-content -->
-            </div><!-- /.blog-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- Blog Item #2 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="blog-item">
-              <div class="blog__img">
-                <a href="#">
-                  <img src="assets/images/blog/grid/2.jpg" alt="blog image">
-                </a>
-              </div><!-- /.entry-img -->
-              <div class="blog__content">
-                <div class="blog__meta">
-                  <div class="blog__meta-cat">
-                    <a href="#">Warehousing</a><a href="#">Industry</a>
-                  </div><!-- /.blog-meta-cat -->
-                  <span class="blog__meta-date">Oct 18, 2019</span>
-                </div><!-- /.blog-meta -->
-                <h4 class="blog__title"><a href="#">Cargo flow through better supply chain visibility, control.</a></h4>
-                <p class="blog__desc">Global provider connected products for consumers, and enterprises worldwide,
-                  supply chain control is everything, provide visibility and traceability needed for...</p>
-                <a href="#" class="btn btn__secondary btn__link">Read More</a>
-              </div><!-- /.entry-content -->
-            </div><!-- /.blog-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- Blog Item #3 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="blog-item">
-              <div class="blog__img">
-                <a href="#">
-                  <img src="assets/images/blog/grid/3.jpg" alt="blog image">
-                </a>
-              </div><!-- /.entry-img -->
-              <div class="blog__content">
-                <div class="blog__meta">
-                  <div class="blog__meta-cat">
-                    <a href="#">Logistics</a><a href="#">Distribution</a>
-                  </div><!-- /.blog-meta-cat -->
-                  <span class="blog__meta-date">Jan 20, 2019</span>
-                </div><!-- /.blog-meta -->
-                <h4 class="blog__title"><a href="#">Importance of specialized focus in Projects, Oil & Gas
-                    Logistics?</a></h4>
-                <p class="blog__desc">Our team provides highly skilled & experienced project managers who know the
-                  intricacies of this vertical and focus on providing innovative solutions in Oil & Gas sector...</p>
-                <a href="#" class="btn btn__secondary btn__link">Read More</a>
-              </div><!-- /.entry-content -->
-            </div><!-- /.blog-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- Blog Item #4 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="blog-item">
-              <div class="blog__img">
-                <a href="#">
-                  <img src="assets/images/blog/grid/4.jpg" alt="blog image">
-                </a>
-              </div><!-- /.entry-img -->
-              <div class="blog__content">
-                <div class="blog__meta">
-                  <div class="blog__meta-cat">
-                    <a href="#">News</a><a href="#">Industry</a>
-                  </div><!-- /.blog-meta-cat -->
-                  <span class="blog__meta-date">Oct 24, 2017</span>
-                </div><!-- /.blog-meta -->
-                <h4 class="blog__title"><a href="#">Changes to our Trade Credit Policy and Procedures</a></h4>
-                <p class="blog__desc">The Atradius platform will provide us with a much deeper pool of research to
-                  assist with assessment of new credit applications and credit limits...</p>
-                <a href="#" class="btn btn__secondary btn__link">Read More</a>
-              </div><!-- /.entry-content -->
-            </div><!-- /.blog-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- Blog Item #5 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="blog-item">
-              <div class="blog__img">
-                <a href="#">
-                  <img src="assets/images/blog/grid/5.jpg" alt="blog image">
-                </a>
-              </div><!-- /.entry-img -->
-              <div class="blog__content">
-                <div class="blog__meta">
-                  <div class="blog__meta-cat">
-                    <a href="#">Insights</a><a href="#">Industry</a>
-                  </div><!-- /.blog-meta-cat -->
-                  <span class="blog__meta-date">Oct 27, 2017</span>
-                </div><!-- /.blog-meta -->
-                <h4 class="blog__title"><a href="#">New Additions to our great Metro trucks Fleet</a></h4>
-                <p class="blog__desc">These new vehicles are all extra high body trucks, with a carrying height equal to
-                  that of a semi trailer. This allows us to accommodate our clients with high freight...</p>
-                <a href="#" class="btn btn__secondary btn__link">Read More</a>
-              </div><!-- /.entry-content -->
-            </div><!-- /.blog-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- Blog Item #6 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="blog-item">
-              <div class="blog__img">
-                <a href="#">
-                  <img src="assets/images/blog/grid/6.jpg" alt="blog image">
-                </a>
-              </div><!-- /.entry-img -->
-              <div class="blog__content">
-                <div class="blog__meta">
-                  <div class="blog__meta-cat">
-                    <a href="#">Logistics</a>
-                  </div><!-- /.blog-meta-cat -->
-                  <span class="blog__meta-date">Oct 24, 2017</span>
-                </div><!-- /.blog-meta -->
-                <h4 class="blog__title"><a href="#">The new Driver Training & Recruitment Program</a></h4>
-                <p class="blog__desc">If you know of anyone looking for a bigger opportunity, a fresh start, or just
-                  something different, please have them contact our operations team now...</p>
-                <a href="#" class="btn btn__secondary btn__link">Read More</a>
-              </div><!-- /.entry-content -->
-            </div><!-- /.blog-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- Blog Item #7 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="blog-item hidden-blog-item">
-              <div class="blog__img">
-                <a href="#">
-                  <img src="assets/images/blog/grid/7.jpg" alt="blog image">
-                </a>
-              </div><!-- /.entry-img -->
-              <div class="blog__content">
-                <div class="blog__meta">
-                  <div class="blog__meta-cat">
-                    <a href="#">Business</a>
-                  </div><!-- /.blog-meta-cat -->
-                  <span class="blog__meta-date">Jan 20, 2019</span>
-                </div><!-- /.blog-meta -->
-                <h4 class="blog__title"><a href="#">Four ways to cheer yourself up on Blue Monday!</a></h4>
-                <p class="blog__desc">The third Monday of January is supposed to be day of year. Whether you
-                  believe that or not....</p>
-                <a href="#" class="btn btn__secondary btn__link">Read More</a>
-              </div><!-- /.entry-content -->
-            </div><!-- /.blog-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- Blog Item #8 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="blog-item hidden-blog-item">
-              <div class="blog__img">
-                <a href="#">
-                  <img src="assets/images/blog/grid/8.jpg" alt="blog image">
-                </a>
-              </div><!-- /.entry-img -->
-              <div class="blog__content">
-                <div class="blog__meta">
-                  <div class="blog__meta-cat">
-                    <a href="#">Modern</a><a href="#">Photography</a>
-                  </div><!-- /.blog-meta-cat -->
-                  <span class="blog__meta-date">Oct 18, 2017</span>
-                </div><!-- /.blog-meta -->
-                <h4 class="blog__title"><a href="#">Old cameras can capture images better than nowdays camera!</a></h4>
-                <p class="blog__desc">Actually, Woodstock was not the first outdoor festival to feature multiple bands
-                  over several days performing...</p>
-                <a href="#" class="btn btn__secondary btn__link">Read More</a>
-              </div><!-- /.entry-content -->
-            </div><!-- /.blog-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- Blog Item #9 -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="blog-item hidden-blog-item">
-              <div class="blog__img">
-                <a href="#">
-                  <img src="assets/images/blog/grid/1.jpg" alt="blog image">
-                </a>
-              </div><!-- /.entry-img -->
-              <div class="blog__content">
-                <div class="blog__meta">
-                  <div class="blog__meta-cat">
-                    <a href="#">Technology</a><a href="#">City</a>
-                  </div><!-- /.blog-meta-cat -->
-                  <span class="blog__meta-date">Jan 20, 2019</span>
-                </div><!-- /.blog-meta -->
-                <h4 class="blog__title"><a href="#">New subway line has the most advanced technology world!</a></h4>
-                <p class="blog__desc">That may be true, but today, almost half a century later, Gary Eagle says it was
-                  only part of the story...</p>
-                <a href="#" class="btn btn__secondary btn__link">Read More</a>
-              </div><!-- /.entry-content -->
-            </div><!-- /.blog-item -->
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-            <a href="#" class="btn btn__primary btn__hover3 loadMoreBlog">Load More</a>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.blog Grid -->
+                                        <div class="octf-header-module">
+                                            <div class="btn-cta-group contact-header">
+                                                <i class="fas fa-phone"></i>
+                                                <div class="cinfo-header">
+                                                    <span>Have Any Questions?</span>
+                                                    <span class="main-text"><a href="tel:+1-800-456-478-23">+1-800-456-478-23</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
 
-    <!-- ========================
-      Footer
-    ========================== -->
-    <footer id="footer" class="footer footer-1">
-      <div class="footer-top">
+                                        <div class="octf-header-module">
+                                            <div class="btn-cta-group btn-cta-header">
+                                                <a class="octf-btn octf-btn-third" href="contact.html">Free Quote</a>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_mobile">
+                <div class="container">
+                    <div class="mlogo_wrapper clearfix">
+                        <div class="mobile_logo">
+                            <a href="index.html">
+                                <img src="images/logo.svg" alt="Engitech">
+                            </a>
+                        </div>
+                        <div id="mmenu_toggle">
+                            <button></button>
+                        </div>
+                    </div>
+                    <div class="mmenu_wrapper">
+                        <div class="mobile_nav collapse">
+                            <ul id="menu-main-menu" class="mobile_mainmenu">
+                                <li class="menu-item-has-children">
+                                    <a href="index.html">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Home 1</a></li>
+                                        <li><a href="index-2.html">Home 2</a></li>
+                                        <li><a href="index-3.html">Home 3</a></li>
+                                        <li><a href="index-4.html">Home 4</a></li>
+                                        <li><a href="index-5.html">Home 5</a></li>
+                                        <li><a href="index-6.html">Home 6</a></li>
+                                        <li><a href="index-7.html">Home 7</a></li>
+                                        <li><a href="index-8.html">Home 8</a></li>
+                                        <li><a href="index-9.html">Home 9</a></li>
+                                        <li><a href="index-10.html">Home 10</a></li>
+                                        <li><a href="index-11.html">Home 11</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Company</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about-us.html">About us</a></li>
+                                        <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                                        <li><a href="our-team.html">Our team</a></li>
+                                        <li><a href="single-team.html">Single team</a></li>
+                                        <li class="menu-item-has-children"><a href="shop.html">Shop</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="single-product.html">Single Product</a></li>
+                                                <li><a href="checkout-page.html">Checkout Page</a></li>
+                                                <li><a href="cart-page.html">Cart Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="typography.html">Typography</a></li>
+                                        <li><a href="elements.html">Elements</a></li>
+                                        <li><a href="faq.html">FAQS</a></li>
+                                        <li><a href="404-error.html">404 Error</a></li>
+                                        <li><a href="cooming-soon.html">Coming Soon</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Services</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="it-services.html">It Services</a></li>
+                                        <li><a href="web-development.html">Web Development</a></li>
+                                        <li><a href="mobile-development.html">Mobile Development</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Projects</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
+                                        <li><a href="portfolio-carousel.html">Portfolio Carousel</a></li>
+                                        <li class="menu-item-has-children"><a href="portfolio-grid.html">Portfolio Grid</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="portfolio-grid.html">Portfolio 3 Columns</a></li>
+                                                <li><a href="portfolio-4-column.html">Portfolio 4 Columns</a></li>
+                                                <li><a href="portfolio-no-gap.html">Portfolio No Gap</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="portfolio-details-1.html">Portfolio Details</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="portfolio-details-1.html">Single Layout 1</a></li>
+                                                <li><a href="portfolio-details-2.html">Single Layout 2</a></li>
+                                                <li><a href="portfolio-details-3.html">Single Layout 3</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children current-menu-item current-menu-ancestor"><a href="blog.html">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog.html">Blog Listing</a></li>
+                                        <li class="current-menu-item"><a href="blog-grid.html">Blog Grid</a></li>
+                                        <li><a href="post.html">Blog Single</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contacts</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="content" class="site-content">
+            <div class="page-header flex-middle">
+                <div class="container">
+                    <div class="inner flex-middle">
+                        <h1 class="page-title">Blog Grid</h1>
+                        <ul id="breadcrumbs" class="breadcrumbs none-style">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active">Blog Grid</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry-content">
+            <div class="container">
+                <div class="blog-grid pgrid">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat">
+                                            <span class="posted-in">
+                                                <a href="#" rel="category tag">Development</a>
+                                            </span>
+                                        </div>                                    
+                                        <a href="post.html"><img src="images/blog1-601x520.jpg" alt=""></a>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">November 21, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">How Web Apps Can  Benefit Online Stores?</a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat">
+                                            <span class="posted-in">
+                                                <a href="#" rel="category tag">Development</a>
+                                            </span>
+                                        </div>                                    
+                                        <a href="post.html">
+                                            <img src="images/blog/grid2.jpg" alt="">
+                                        </a>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">November 21, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">0 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">Plan Your Project with  Your Software</a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat"><span class="posted-in"><a href="#" rel="category tag">Development</a></span></div>
+                                        <a href="post.html">
+                                            <img src="images/blog/grid3.jpg" alt="">
+                                        </a>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">September 24, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">Does Magento Shared Hosting Suit You? </a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat"><span class="posted-in"><a href="#" rel="category tag">Development</a></span></div>
+                                        <a class="btn-play" href="https://vimeo.com/87959439"><i class="flaticon-play"></i></a>
+                                        <img src="images/blog/grid4.jpg" alt="">
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">September 24, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">Which Database is Ideal for Your Business Need? </a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat"><span class="posted-in"><a href="#" rel="category tag">Development</a></span></div>
+                                        <div class="gallery-post img-slider owl-carousel owl-theme">
+                                            <div class="item-image">
+                                                <img src="images/blog/grid5.jpg" alt="">
+                                            </div>
+                                            <div class="item-image">
+                                                <img src="images/blog/grid11.jpg" alt="">
+                                            </div>
+                                            <div class="item-image">
+                                                <img src="images/blog/grid12.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">September 24, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">Plan Your Project with Your Software </a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat"><span class="posted-in"><a href="#" rel="category tag">Development</a></span></div>
+                                        <a href="post.html">
+                                            <img src="images/blog/grid6.jpg" alt="">
+                                        </a>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">September 24, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">5 Effective Tips to Build An Engaging App  </a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat"><span class="posted-in"><a href="#" rel="category tag">Development</a></span></div>
+                                        <a href="post.html">
+                                            <img src="images/blog/grid7.jpg" alt="">
+                                        </a>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">September 24, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">How Web Design Can Enhance Experience?</a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat"><span class="posted-in"><a href="#" rel="category tag">Development</a></span></div>
+                                        <a href="post.html">
+                                            <img src="images/blog/grid8.jpg" alt="">
+                                        </a>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">September 24, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">8 Interesting Ideas For Travel App</a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat"><span class="posted-in"><a href="#" rel="category tag">Development</a></span></div>
+                                        <a href="post.html">
+                                            <img src="images/blog/grid9.jpg" alt="">
+                                        </a>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">September 24, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">Building Data Analytics Software </a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat"><span class="posted-in"><a href="#" rel="category tag">Development</a></span></div>
+                                        <a href="post.html">
+                                            <img src="images/blog/grid10.jpg" alt="">
+                                        </a>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">September 24, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">Tackling the Changes of Retail Industry </a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat"><span class="posted-in"><a href="#" rel="category tag">Development</a></span></div>
+                                        <a href="post.html">
+                                            <img src="images/blog/grid11.jpg" alt="">
+                                        </a>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">September 24, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">How to Make Website WCAG Compliant? </a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <article class="post-box blog-item">
+                                <div class="post-inner">
+                                    <div class="entry-media">
+                                        <div class="post-cat"><span class="posted-in"><a href="#" rel="category tag">Development</a></span></div>
+                                        <a href="post.html">
+                                            <img src="images/blog/grid12.jpg" alt="">
+                                        </a>
+                                    </div>                         
+                                    <div class="inner-post">
+                                        <div class="entry-header">
+                                            <div class="entry-meta">
+                                                <span class="posted-on">_ <a href="#">September 24, 2019</a></span>
+                                                <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                                <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                            </div><!-- .entry-meta -->
+                                            
+                                            <h3 class="entry-title"><a href="post.html">You have a Great Business Idea?  </a></h3>
+                                        </div><!-- .entry-header -->
+                                        
+                                        <div class="btn-readmore">
+                                            <a href="post.html"><i class="flaticon-right-arrow-1"></i>LEARN MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="ot-button text-center">
+                    <a href="#" class="octf-btn octf-btn-primary">Load More</a>
+                </div>
+            </div>
+        </div>
+
+    <footer id="site-footer" class="site-footer footer-v2">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-4 footer__widget footer__widget-about">
-              <div class="footer__widget-content">
-                <img src="assets/images/logo/logo-dark.png" alt="logo" class="mb-30">
-              </div>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-6 col-sm-6 col-md-3 col-lg-2 footer__widget footer__widget-nav">
-              <h6 class="footer__widget-title">Who We Are</h6>
-              <div class="footer__widget-content">
-                <nav>
-                  <ul class="list-unstyled">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Meet Our Team</a></li>
-                    <li><a href="#">News & Media</a></li>
-                    <li><a href="#">Case Studies</a></li>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">Careers</a></li>
-                  </ul>
-                </nav>
-              </div><!-- /.footer-widget-content -->
-            </div><!-- /.col-lg-2 -->
-            <div class="col-6 col-sm-6 col-md-3 col-lg-2 footer__widget footer__widget-nav">
-              <h6 class="footer__widget-title">What We Do</h6>
-              <div class="footer__widget-content">
-                <nav>
-                  <ul class="list-unstyled">
-                    <li><a href="#">Warehousing</a></li>
-                    <li><a href="#">Air Freight</a></li>
-                    <li><a href="#">Ocean Freight</a></li>
-                    <li><a href="#">Road Freight</a></li>
-                    <li><a href="#">Supply Chain</a></li>
-                    <li><a href="#">Packaging</a></li>
-                  </ul>
-                </nav>
-              </div><!-- /.footer-widget-content -->
-            </div><!-- /.col-lg-2 -->
-            <div class="col-6 col-sm-6 col-md-3 col-lg-2 footer__widget footer__widget-nav">
-              <h6 class="footer__widget-title">Who We Serve</h6>
-              <div class="footer__widget-content">
-                <nav>
-                  <ul class="list-unstyled">
-                    <li><a href="#">Retail & Consumer</a></li>
-                    <li><a href="#">Sciences & Healthcare</a></li>
-                    <li><a href="#">Industrial & Chemical</a></li>
-                    <li><a href="#">Power Generation</a></li>
-                    <li><a href="#">Food & Beverage</a></li>
-                    <li><a href="#">Oil & Gas</a></li>
-                  </ul>
-                </nav>
-              </div><!-- /.footer-widget-content -->
-            </div><!-- /.col-lg-2 -->
-            <div class="col-6 col-sm-6 col-md-3 col-lg-2 footer__widget footer__widget-nav">
-              <h6 class="footer__widget-title">Quick Links</h6>
-              <div class="footer__widget-content">
-                <nav>
-                  <ul class="list-unstyled">
-                    <li><a href="#">Request A Quote</a></li>
-                    <li><a href="#">Track & Trace</a></li>
-                    <li><a href="#">Find A Location</a></li>
-                    <li><a href="#">Global Agents</a></li>
-                    <li><a href="#">Help & FAQ</a></li>
-                  </ul>
-                </nav>
-              </div><!-- /.footer-widget-content -->
-            </div><!-- /.col-lg-2 -->
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-      </div><!-- /.footer-top -->
-      <div class="container">
-        <div class="footer-bottom">
-          <div class="row">
-            <div class="col-sm-12 col-md-9 col-lg-9">
-              <div class="footer__copyright">
-                <nav>
-                  <ul class="list-unstyled footer__copyright-links d-flex flex-wrap">
-                    <li><a href="#">Terms & Conditions </a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                    <li><a href="#">Employee login</a></li>
-                  </ul>
-                </nav>
-                <span>&copy; 2019 Logisti, with Love by</span>
-                <a href="http://themeforest.net/user/7oroof">7oroof.com</a>
-              </div><!-- /.Footer-copyright -->
-            </div><!-- /.col-lg-6 -->
-            <div class="col-sm-12 col-md-3 col-lg-3 d-flex align-items-center">
-              <div class="social__icons justify-content-end w-100">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-              </div><!-- /.social-icons -->
-            </div><!-- /.col-lg-6 -->
-          </div><!-- /.row -->
-        </div><!-- /.Footer-bottom -->
-      </div><!-- /.container -->
-    </footer><!-- /.Footer -->
-    <button id="scrollTopBtn"><i class="fa fa-long-arrow-up"></i></button>
-
-    <div class="module__search-container">
-      <i class="fa fa-times close-search"></i>
-      <form class="module__search-form">
-        <input type="text" class="search__input" placeholder="Search Here">
-        <button class="module__search-btn"><i class="fa fa-search"></i></button>
-      </form>
-    </div><!-- /.module-search-container -->
-
-  </div><!-- /.wrapper -->
-
-  <script src="assets/js/jquery-3.3.1.min.js"></script>
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/main.js"></script>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="images/logo-light.png" alt="">
+                </div>
+            </div>
+            <div class="space-60"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-info box-style2 ft-contact-info">
+                        <div class="box-icon"><i class="flaticon-world-globe"></i></div>
+                        <p>411 University St, Seattle, USA</p>
+                        <h6>Our Address</h6>                                            
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-info box-style2 ft-contact-info">
+                        <div class="box-icon"><i class="flaticon-envelope"></i></div>
+                        <p>contact@mail.net</p>
+                        <h6>Our Mailbox</h6>                                            
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-info box-style2 ft-contact-info">
+                        <div class="box-icon"><i class="flaticon-phone-1"></i></div>
+                        <p>+1 -800-456-478-23</p>
+                        <h6>Our Phone</h6>                                          
+                    </div>
+                </div>
+            </div>
+            <div class="space-65"></div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-20"></div>
+                    <p class="copyright-text v2">Copyright © 2020 Engitech by ThemeModern. All Rights Reserved.</p>
+                    <div class="space-26"></div>
+                    <div class="ft-list-icon">
+                        <a class="twitter" href="twitter.html"><i class="fab fa-twitter"></i></a>
+                        <a class="facebook" href="facebook.html"><i class="fab fa-facebook-f"></i></a>
+                        <a class="linkedin" href="linkedin.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="instagram" href="instagram.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- #site-footer -->
+</div><!-- #page -->
+<a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+        <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/easypiechart.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/header-mobile.js"></script>
+    <script src="js/royal_preloader.min.js"></script>
+    <script>
+        window.jQuery = window.$ = jQuery;  
+        (function($) { "use strict";
+            //Preloader
+            Royal_Preloader.config({
+                mode           : 'logo',
+                logo           : 'images/logo.svg',
+                logo_size      : [160, 75],
+                showProgress   : true,
+                showPercentage : true,
+                text_colour: '#000000',
+                background:  '#ffffff'
+            });
+        })(jQuery);
+    </script> 
 </body>
 
-
-<!-- Mirrored from 7oroof.com/demos/logisti/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Jul 2021 01:34:52 GMT -->
+<!-- Mirrored from templates.thememodern.com/engitech/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 28 Dec 2021 21:04:27 GMT -->
 </html>
