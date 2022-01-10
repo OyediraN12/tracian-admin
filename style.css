@@ -6141,7 +6141,7 @@ div.tp-bullet.selected, div.tp-bullet:hover {
 }
 /* Home 2 */
 .home2-top {
-    background-image: url(images/home-image.jpg);
+    background-image: url(images/home-2.jpg);
     background-size: cover;
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -6674,7 +6674,7 @@ div.tp-bullet.selected, div.tp-bullet:hover {
     transform: translateY(-8px);
 }
 .serv-box.bg-s1 {
-    background-image: linear-gradient(110deg,#2B236E 0%,#6fd43a 100%);
+    background-image: linear-gradient(110deg,#043B38 0%,#1C9B8E 100%);
 }
 .serv-box.v5 .icon-main {
     background: rgba(255,255,255,.2);
@@ -8524,7 +8524,7 @@ body.font-9, .font-9 button, .font-9 input, .font-9 select, .font-9 optgroup, .f
   margin-bottom: 25px;
 }
 .app-dev-i9 {
-  background-color: #091636;
+  background-color: #fff;
   /* background-image: url(images/background/bg2-home9.png); */
   background-position: 0 135px;
   background-repeat: no-repeat;
@@ -11165,7 +11165,7 @@ svg:not(:root) {
 }
 
 .footer-v2 {
-    background-color: #211E3B;
+    background-color: #0688A5;
     background-image: url(images/background/bg-footer1.png);
     background-position: top center;
     background-repeat: no-repeat;
