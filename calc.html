@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" name="myform">
+        <input type="text" name="fst">
+        <input type="text" name="send">
+        <button type="button" onclick="cal()">Calculate</button>
+
+        <input type="text" name="result1">
+        <input type="text" name="result2">
+    </form>
+    <script type="text/javascript"> 
+    function cal(){
+        fst = parseInt(myform.fst.value);
+        send = parseInt(myform.fst.value);
+        result1 = fst + send;
+        result2 = fst - send;
+        myform.result1.value= result1
+        myform.result2.value= result2
+    }
+    </script>
+</body>
+</html>

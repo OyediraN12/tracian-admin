@@ -1000,7 +1000,7 @@ a:hover, a:active {
 .header-topbar {
   padding: 7px 0px;
   border-bottom: 1px solid transparent;
-  background: #141d38;
+  background: #003b5c;
   color: #b5b5b5;
   font-size: 14px;
   font-weight: 600;
@@ -2073,7 +2073,7 @@ a:hover, a:active {
   min-height: 350px;
   color: #12cae1;
   font-weight: 500;
-  background: #262051 center center no-repeat;
+  background: #003b5c center center no-repeat;
   background-size: cover;
 }
 .page-header .page-title {
@@ -11129,7 +11129,7 @@ svg:not(:root) {
 }
 /* Footer */
 .footer-v1 {
-    background-color: #201D3C;
+    background-color: #003b5c;
     padding: 115px 0 50px 0;
     color: #AEAACB;
 }
@@ -11157,8 +11157,8 @@ svg:not(:root) {
     color: #AEAACB;
 }
 .list-items a:hover {
-    color: #fff;
-}
+    color: #fff;}
+footer
 .copyright-text {
     margin-bottom: 0;
     font-size: 15px;

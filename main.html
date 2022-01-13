@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="css/royal-preload.css" />
+    <!-- <link rel="stylesheet" href="css/royal-preload.css" /> -->
     <style>
         .fas {
             color: blueviolet;
@@ -40,7 +40,7 @@
         }
         .form-cal{
             border-radius: 10px;
-            padding: 20px;
+            padding: 30px;
             background-color: #c0ecee;
         }
         .to-right{
@@ -51,7 +51,7 @@
 
         }
         .estimate{
-            padding:px;
+            margin-top: 20px;
             border: 1px solid black;
             border-radius: 10px;
         }
@@ -348,7 +348,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="icon-box-s2 s1 pb-60">
-                                <div class="icon-main"><span class="flaticon-code"></span></div>
+                                <div class="icon-main"><img src="./images/service/service-icon-1.png" alt=""></div>
                                 <div class="content-box">
                                     <h5>Free US Address</h5>
                                     <p>Direct Supply makes shopping online so much easier. Sign up for your free U.S Address today, No annual fees and superior customer support to guide you through the process</p>
@@ -357,7 +357,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="icon-box-s2 s1 pb-60">
-                                <div class="icon-main"><span class="flaticon-app"></span></div>
+                                <div class="icon-main"><img src="./images/service/service-icon-2.png" alt=""></div>
                                 <div class="content-box">
                                     <h5>Air Services</h5>
                                     <p>Enjoy a one-stop airfreight solution with competitive rates, efficient support and end-to-end visibility and real-time tracking.</p>
@@ -366,7 +366,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="icon-box-s2 s1 pb-60">
-                                <div class="icon-main"><span class="flaticon-monitor"></span></div>
+                                <div class="icon-main"><img src="./images/service/service-icon-3.png" alt=""></div>
                                 <div class="content-box">
                                     <h5>Ocean Delivery</h5>
                                     <p>With our ocean delivery you now have the freedom to transport your small or large shipments all year round, while achieving the best balance of time, cost and confidence. Ask about our weightless shipping</p>
@@ -388,7 +388,7 @@
                     <div class="row">
                         <div class="col-lg-7 align-self-center mb-4 mb-lg-0">
                             <div class="technology-v3-left">
-                                <div class="ot-heading">
+                                <div class="ot-heading"
                                     <span class="text-primary-light">// How it works</span>
                                     <h2 class="main-heading">Improve and Innovate with the Tech Trends</h2>
                                 </div>
@@ -473,8 +473,7 @@
                         <div class="widget-footer">
                             <h5 class="text-white">Quick Links</h5>
                             <ul class="list-items">
-                                <li class="list-item"><a href="it-services.html">Home</a></li>
-                                <li class="list-item"><a href="it-services.html">Rates</a></li>
+                                <li class="list-item"><a href="">About Us</a></li>
                                 <li class="list-item"><a href="it-services.html">FAq</a></li>
                                 <li class="list-item"><a href="it-services.html">Calculator</a></li>
                             </ul>
@@ -528,7 +527,7 @@
                 <div class="modal-body">
                     <div class="row">
                     <p>Most trusted Freight Forwarders and Custom brokers. A professional affordable shipping company that keeps the customer service on the top.</p>
-                        <div class="col-md-6 calc">
+                        <div class="col-md-6 calc ">
                             <form id="ajax-form" name="ajax-form" action="contact.php" method="post" class="shipping-cal form-cal row p-3">
                                 <div class="form-group col-md-12">
                                     <label class="">Shipping Method</label>
@@ -539,24 +538,16 @@
                                     </select>
                                 </div>
                                 <div class="row air box p-3">
-                                    <div class="col-md-6 form-group">
+                                    <div class="col-md-12 form-group">
                                         <label for="exampleInputPassword11">Invoice Amount USD</label>
-                                        <input type="text" class="form-control"  placeholder="">
+                                        <input type="text" class="form-control"  placeholder="" name="invamt">
                                     </div>
-                                    <div class="col-md-6 form-group">
+                                    <div class="col-md-12 form-group">
                                         <label for="exampleInput11">Weight (lbs)</label>
-                                        <input type="text" class="form-control"  placeholder="">
-                                    </div>
-                                    <div class="col-md-12 form-group ">
-                                        <label class="">Item Description</label>
-                                        <select class="form-control">
-                                            <option >cloth</option>
-                                            <option >baby</option>
-                                            <option >New</option>
-                                        </select>
+                                        <input type="text" class="form-control"  placeholder="" name="">
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-block octf-btn octf-btn-third "><i class="fa fa-calculator"></i> Calculate</button>
+                                        <button type="button" class="btn btn-block octf-btn octf-btn-third "><i class="fa fa-calculator" onclick="cal()"></i> Calculate</button>
                                     </div>
                                 </div>
                                 <div class=" row sea box p-3">
@@ -619,15 +610,14 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-5 mt-3">
                             <div class="estimate p-4">
                                 <h5>Cost Estimation</h5>
                                 <div class="col-12"> 
                                     <div class="desc">
                                         <p class="calc-est">Freight <span class="to-right">$ 23.00</span> </p> <hr>
-                                        <p class="calc-est">CIF <span class="to-right">$ 23.00r</span> </p>  <hr>
-                                        <p class="calc-est">Duty Charges <span class="to-right">$ 23.00</span> </p>  <hr>
                                         <p class="font-weight-bold mt-3">Total <span class="to-right">$ 23.00</span></p> <hr>
+                                        <p class="calc-est">CIF <span class="to-right">$ 23.00r</span> </p> 
                                     </div>
                                 </div>
                             </div>
@@ -648,7 +638,7 @@
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/header-mobile.js"></script>
-    <script src="js/royal_preloader.min.js"></script>
+    <!-- <script src="js/royal_preloader.min.js"></script> -->
     <script>
         window.jQuery = window.$ = jQuery;
         (function($) {
@@ -687,6 +677,14 @@
          }).change();
      });
      </script>
+     <script type="text/javascript"> 
+        function cal(){
+            fst = parseInt(myform.fst.value);
+            send = parseInt(myform.fst.value);
+            result = fst + send;
+            myform.result.value= result
+        }
+        </script>
 </body>
 
 </html>
