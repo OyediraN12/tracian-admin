@@ -540,14 +540,14 @@
                                 <div class="row air box p-3">
                                     <div class="col-md-12 form-group">
                                         <label for="exampleInputPassword11">Invoice Amount USD</label>
-                                        <input type="text" class="form-control"  placeholder="" name="invamt">
+                                        <input type="text" class="form-control" id="air-amount" placeholder="" name="invamt">
                                     </div>
                                     <div class="col-md-12 form-group">
                                         <label for="exampleInput11">Weight (lbs)</label>
-                                        <input type="text" class="form-control"  placeholder="" name="">
+                                        <input type="text" class="form-control" id="air-weight"  placeholder="" name="">
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="button" class="btn btn-block octf-btn octf-btn-third "><i class="fa fa-calculator" onclick="cal()"></i> Calculate</button>
+                                        <button type="button" class="btn btn-block octf-btn octf-btn-third " onclick="calculateAir()"><i class="fa fa-calculator"></i> Calculate</button>
                                     </div>
                                 </div>
                                 <div class=" row sea box p-3">
@@ -615,9 +615,9 @@
                                 <h5>Cost Estimation</h5>
                                 <div class="col-12"> 
                                     <div class="desc">
-                                        <p class="calc-est">Freight <span class="to-right">$ 23.00</span> </p> <hr>
-                                        <p class="font-weight-bold mt-3">Total <span class="to-right">$ 23.00</span></p> <hr>
-                                        <p class="calc-est">CIF <span class="to-right">$ 23.00r</span> </p> 
+                                        <p class="calc-est">Freight <span class="to-right" id="est-freight">$ 23.00</span> </p> <hr>
+                                        <p class="font-weight-bold mt-3">Total <span class="to-right" id="est-total">$ 23.00</span></p> <hr>
+                                        <p class="calc-est">CIF <span class="to-right" id="est-cif">$ 23.00r</span> </p> 
                                     </div>
                                 </div>
                             </div>
@@ -683,6 +683,16 @@
             send = parseInt(myform.fst.value);
             result = fst + send;
             myform.result.value= result
+        }
+        function calculateAir() {
+            var airAmount = $("#air-amount").val();
+            var airWeight = $("#air-weight").val();
+
+            // Select Cost estimate and set the text
+            $("#est-freight").text("sdjshdj");
+            $("#est-total").text("sdjshdj");
+            $("#est-cif").text("sdjshdj");
+            console.log(airWeight, airAmount);
         }
         </script>
 </body>
