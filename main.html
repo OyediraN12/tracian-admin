@@ -540,11 +540,11 @@
                                 <div class="row air box p-3">
                                     <div class="col-md-12 form-group">
                                         <label for="exampleInputPassword11">Invoice Amount USD</label>
-                                        <input type="text" class="form-control" id="air-amount" placeholder="" name="invamt">
+                                        <input type="text" class="form-control" id="air-amount" placeholder="" >
                                     </div>
                                     <div class="col-md-12 form-group">
                                         <label for="exampleInput11">Weight (lbs)</label>
-                                        <input type="text" class="form-control" id="air-weight"  placeholder="" name="">
+                                        <input type="text" class="form-control" id="air-weight"  placeholder="" >
                                     </div>
                                     <div class="col-md-12">
                                         <button type="button" class="btn btn-block octf-btn octf-btn-third " onclick="calculateAir()"><i class="fa fa-calculator"></i> Calculate</button>
@@ -553,30 +553,22 @@
                                 <div class=" row sea box p-3">
                                     <div class="col-md-12 form-group">
                                         <label for="exampleInputPassword11">Invoice Amount USD</label>
-                                        <input type="text" class="form-control"  placeholder="">
+                                        <input type="text" class="form-control" id="sea-amount" placeholder="">
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="exampleInput11">Lenght (inch)</label>
-                                        <input type="text" class="form-control"  placeholder="">
+                                        <input type="text" class="form-control" id="sea-length"  placeholder="">
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="exampleInput11">Width (inch)</label>
-                                        <input type="text" class="form-control"  placeholder="">
+                                        <input type="text" class="form-control" id="sea-width"  placeholder="">
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="exampleInput11">Height (inch)</label>
-                                        <input type="text" class="form-control"  placeholder="">
-                                    </div>
-                                    <div class="col-md-12 form-group ">
-                                        <label class="">Item Description</label>
-                                        <select class="form-control">
-                                            <option id="air" >Air</option>
-                                            <option id="sea">Sea Drop</option>
-                                            <option id="express">Express</option>
-                                        </select>
+                                        <input type="text" class="form-control" id="sea-height"  placeholder="">
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-block octf-btn octf-btn-third "><i class="fa fa-calculator"></i> Calculate</button>
+                                        <button type="button" class="btn btn-block octf-btn octf-btn-third "><i class="fa fa-calculator" onclick="calculateSea()"></i> Calculate</button>
                                     </div>
                                 </div>
                                 <div class=" row express box p-3">
@@ -585,7 +577,7 @@
                                         <input type="text" class="form-control"  placeholder="">
                                     </div>
                                     <div class="col-md-4 form-group">
-                                        <label for="exampleInput11">Lenght (inch)</label>
+                                        <label for="exampleInput11">Lenght11 (inch)</label>
                                         <input type="text" class="form-control"  placeholder="">
                                     </div>
                                     <div class="col-md-4 form-group">
@@ -595,14 +587,6 @@
                                     <div class="col-md-4 form-group">
                                         <label for="exampleInput11">Height (inch)</label>
                                         <input type="text" class="form-control"  placeholder="">
-                                    </div>
-                                    <div class="col-md-12 form-group ">
-                                        <label class="">Item Description</label>
-                                        <select class="form-control">
-                                            <option id="air" >Air</option>
-                                            <option id="sea">Sea Drop</option>
-                                            <option id="express">Express</option>
-                                        </select>
                                     </div>
                                     <div class="col-md-12">
                                         <button type="submit" class="btn btn-block octf-btn octf-btn-third "><i class="fa fa-calculator"></i> Calculate</button>
@@ -690,16 +674,40 @@
             var airAmount = $("#air-amount").val();
             var airWeight = $("#air-weight").val();
             var total = parseFloat(airAmount)  + parseFloat(airWeight);
-            var insurance = 1.00;
+            var insurance = 1.50;
+            var fuel = 1.00;
+            var freight = 4.50;
+            var cif = parseFloat(airAmount) + parseFloat(insurance) + parseFloat(freight);
 
 
             // Select Cost estimate and set the text
-            $("#est-freight").text("$4.00");
-            $("#est-total").text(total);
-            $("#est-cif").text("$23.00");
-            $("#est-ins").text("$"+insurance);
+            $("#est-freight").text("$"+ freight + "0");
+            $("#est-total").text("$" + total + ".00");
+            $("#est-cif").text("$" + cif + ".0");
+            $("#est-ins").text("$1.00");
             $("#est-fuel").text("$1.00");
             console.log(airWeight, airAmount);
+        }
+
+        function calculateSea() {
+            var seaAmount = $("#sea-amount").val();
+            var seaLength = $("#sea-length").val();
+            var seaWidth = $("#sea-width").val();
+            var seaHeight = $("#sea-height").val();
+            var volume = parseFloats(seaLength)  * parseFloat(seaWidth) * parseFloat(seaHeight);
+            var total = volume / 1728;
+            var fuel = 1.00;
+            var freight = 120.0;
+            // var cif = parseFloat(seaAmount) + parseFloat(insurance) + parseFloat(freight);
+
+
+            // Select Cost estimate and set the text
+            $("#est-freight").text("$"+ freight + "0");
+            $("#est-total").text("$" + total + ".00");
+            $("#est-cif").text("$");
+            $("#est-ins").text("$1.00");
+            $("#est-fuel").text("$1.00");
+            // console.log(airWeight, airAmount);
         }
         </script>
 </body>
