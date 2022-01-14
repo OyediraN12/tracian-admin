@@ -690,15 +690,15 @@
             var airAmount = $("#air-amount").val();
             var airWeight = $("#air-weight").val();
             var total = parseFloat(airAmount)  + parseFloat(airWeight);
-            var insurance = parseFloat(1.00);
+            var insurance = 1.00;
 
 
             // Select Cost estimate and set the text
-            $("#est-freight").text("$" + 4.00);
+            $("#est-freight").text("$4.00");
             $("#est-total").text(total);
-            $("#est-cif").text("$" + 23.00);
-            $("#est-ins").text(insurance);
-            $("#est-fuel").text("$" + 1.00);
+            $("#est-cif").text("$23.00");
+            $("#est-ins").text("$"+insurance);
+            $("#est-fuel").text("$1.00");
             console.log(airWeight, airAmount);
         }
         </script>
