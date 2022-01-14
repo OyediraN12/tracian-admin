@@ -615,9 +615,11 @@
                                 <h5>Cost Estimation</h5>
                                 <div class="col-12"> 
                                     <div class="desc">
-                                        <p class="calc-est">Freight <span class="to-right" id="est-freight">$ 23.00</span> </p> <hr>
-                                        <p class="font-weight-bold mt-3">Total <span class="to-right" id="est-total">$ 23.00</span></p> <hr>
-                                        <p class="calc-est">CIF <span class="to-right" id="est-cif">$ 23.00r</span> </p> 
+                                        <p class="calc-est">Freight <span class="to-right" id="est-freight">$ 0.00</span> </p> <hr>
+                                        <p class="calc-est">Insurance <span class="to-right" id="est-ins">$ 0.00</span> </p> <hr>
+                                        <p class="calc-fuel">Fuel <span class="to-right" id="est-fuel">$ 0.00</span> </p> <hr>
+                                        <p class="font-weight-bold mt-3">Total <span class="to-right" id="est-total">$ 0.00</span></p> <hr>
+                                        <p class="calc-est">CIF <span class="to-right" id="est-cif">$ 0.00</span> </p> 
                                     </div>
                                 </div>
                             </div>
@@ -687,11 +689,14 @@
         function calculateAir() {
             var airAmount = $("#air-amount").val();
             var airWeight = $("#air-weight").val();
+            var total = parseFloat(airAmount)  + parseFloat(airWeight);
 
             // Select Cost estimate and set the text
-            $("#est-freight").text("sdjshdj");
-            $("#est-total").text("sdjshdj");
-            $("#est-cif").text("sdjshdj");
+            $("#est-freight").text("$" + 4.00);
+            $("#est-total").text(total);
+            $("#est-cif").text("$" + 23.00);
+            $("#est-ins").text("$" + float(1.50));
+            $("#est-fuel").text(float("$" + float(1.00)));
             console.log(airWeight, airAmount);
         }
         </script>
