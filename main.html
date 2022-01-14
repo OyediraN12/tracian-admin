@@ -617,7 +617,7 @@
                                     <div class="desc">
                                         <p class="calc-est">Freight <span class="to-right" id="est-freight">$ 0.00</span> </p> <hr>
                                         <p class="calc-est">Insurance <span class="to-right" id="est-ins">$ 0.00</span> </p> <hr>
-                                        <p class="calc-fuel">Fuel <span class="to-right" id="est-fuel">$ 0.00</span> </p> <hr>
+                                        <p class="calc-est">Fuel <span class="to-right" id="est-fuel">$ 0.00</span> </p> <hr>
                                         <p class="font-weight-bold mt-3">Total <span class="to-right" id="est-total">$ 0.00</span></p> <hr>
                                         <p class="calc-est">CIF <span class="to-right" id="est-cif">$ 0.00</span> </p> 
                                     </div>
@@ -690,13 +690,15 @@
             var airAmount = $("#air-amount").val();
             var airWeight = $("#air-weight").val();
             var total = parseFloat(airAmount)  + parseFloat(airWeight);
+            var insurance = parseFloat(1.00);
+
 
             // Select Cost estimate and set the text
             $("#est-freight").text("$" + 4.00);
             $("#est-total").text(total);
             $("#est-cif").text("$" + 23.00);
-            $("#est-ins").text("$" + float(1.50));
-            $("#est-fuel").text(float("$" + float(1.00)));
+            $("#est-ins").text(insurance);
+            $("#est-fuel").text("$" + 1.00);
             console.log(airWeight, airAmount);
         }
         </script>
