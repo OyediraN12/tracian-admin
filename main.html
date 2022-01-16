@@ -51,7 +51,7 @@
 
         }
         .estimate{
-            margin-top: 20px;
+            margin-top: 0px;
             border: 1px solid black;
             border-radius: 10px;
         }
@@ -484,7 +484,6 @@
                             <h5 class="text-white">Contact Us</h5>
                             <p>Find us on social media</p>
                             <ul class="social-list">
-                                <li><a href="http://twitter.com/" target="_self"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="http://facebook.com/" target="_self"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="http://linkedin.com/" target="_self"><i class="fab fa-linkedin-in"></i></a></li>
                                 <li><a href="http://instagram/" target="_self"><i class="fab fa-instagram"></i></a></li>
@@ -568,7 +567,7 @@
                                         <input type="text" class="form-control" id="sea-height"  placeholder="">
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="button" class="btn btn-block octf-btn octf-btn-third "><i class="fa fa-calculator" onclick="calculateSea()"></i> Calculate</button>
+                                        <button type="button" class="btn btn-block octf-btn octf-btn-third " onclick="calculateSea()"><i class="fa fa-calculator" ></i> Calculate</button>
                                     </div>
                                 </div>
                                 <div class=" row express box p-3">
@@ -594,7 +593,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-md-5 mt-3">
+                        <div class="col-md-5 ">
                             <div class="estimate p-4">
                                 <h5>Cost Estimation</h5>
                                 <div class="col-12"> 
@@ -603,7 +602,8 @@
                                         <p class="calc-est">Insurance <span class="to-right" id="est-ins">$ 0.00</span> </p> <hr>
                                         <p class="calc-est">Fuel <span class="to-right" id="est-fuel">$ 0.00</span> </p> <hr>
                                         <p class="font-weight-bold mt-3">Total <span class="to-right" id="est-total">$ 0.00</span></p> <hr>
-                                        <p class="calc-est">CIF <span class="to-right" id="est-cif">$ 0.00</span> </p> 
+                                        <p class="calc-est">CIF <span class="to-right" id="est-cif">$ 0.00</span> </p> <hr>
+                                        <p class="calc-est">Duty Rates <span class="to-right" id="est-duty">$ 0.00</span> </p> 
                                     </div>
                                 </div>
                             </div>
@@ -690,23 +690,30 @@
         }
 
         function calculateSea() {
+            // 200 is the cost of the product value
             var seaAmount = $("#sea-amount").val();
             var seaLength = $("#sea-length").val();
             var seaWidth = $("#sea-width").val();
             var seaHeight = $("#sea-height").val();
-            var volume = parseFloats(seaLength)  * parseFloat(seaWidth) * parseFloat(seaHeight);
+            var volume = parseFloat(seaLength)  * parseFloat(seaWidth) * parseFloat(seaHeight);
             var total = volume / 1728;
-            var fuel = 1.00;
+            var fuel = parseFloat(1.00);
             var freight = 120.0;
+            var insurance = parseFloat(0.1) * 200;
+            var dutyrate = parseFloat(0.35) * seaAmount;
+            var cif = 200 + fuel + insurance;
+            var sum = 120 + fuel + insurance;
+
             // var cif = parseFloat(seaAmount) + parseFloat(insurance) + parseFloat(freight);
 
 
             // Select Cost estimate and set the text
-            $("#est-freight").text("$"+ freight + "0");
-            $("#est-total").text("$" + total + ".00");
-            $("#est-cif").text("$");
-            $("#est-ins").text("$1.00");
+            $("#est-freight").text("$"+ "120.00");
+            $("#est-total").text("$"+ sum+ ".00" );
+            $("#est-cif").text( "$" + cif);
+            $("#est-ins").text("$" + insurance + ".00");
             $("#est-fuel").text("$1.00");
+            $("#est-duty").text("$" + dutyrate + ".00");
             // console.log(airWeight, airAmount);
         }
         </script>
