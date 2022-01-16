@@ -39,6 +39,9 @@
         #hideValuesOnSelect{
           display: none;
        }
+       .to-right{
+           float: right;
+       }
     </style>
 
 </head>
@@ -468,25 +471,45 @@
                                             <div class="row air box">
                                                 <div class="col-md-6 form-group">
                                                     <label for="exampleInputPassword11">Invoice Amount USD</label>
-                                                    <input type="text" class="form-control"  placeholder="">
+                                                    <input type="text" class="form-control" id="air-amount" placeholder="">
                                                 </div>
-                                                <div class="col-md-6 form-group">
-                                                    <label for="">Select  Weight</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">LBS</option>
-                                                        <option>KG</option>
-                                                    </select>
-                                                </div>
+                                                
                                                 <div class="col-md-6 form-group">
                                                     <label for="exampleInput11">Weight (lbs)</label>
-                                                    <input type="text" class="form-control"  placeholder="">
+                                                    <input type="text" class="form-control" id="air-weight" placeholder="">
+                                                </div>
+                                                <div class="col-md-12 form-group">
+                                                    <label for="">Item Description</label>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">Cloth</option>
+                                                        <option>New</option>
+                                                    </select>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <button type="submit" class="btn btn-block btn-danger "><i class="fa fa-calculator"></i>Calculate</button>
+                                                    <button type="button" class="btn btn-block btn-danger" onclick="calculateAir()"><i class="fa fa-calculator"></i>Calculate</button>
                                                 </div>
                                             </div>
-                                            <div class="sea box">
-                                                me and success
+                                            <div class="row sea box">
+                                                <div class="col-md-12 form-group">
+                                                    <label for="exampleInputPassword11">Invoice Amount USD</label>
+                                                    <input type="text" class="form-control"  placeholder="">
+                                                </div>
+                                                <div class="col-md-4 form-group">
+                                                    <label for="exampleInput11">Lenght (inch)</label>
+                                                    <input type="text" class="form-control" id="sea-length"  placeholder="">
+                                                </div>
+                                                <div class="col-md-4 form-group">
+                                                    <label for="exampleInput11">Width (inch)</label>
+                                                    <input type="text" class="form-control" id="sea-width"  placeholder="">
+                                                </div>
+                                                <div class="col-md-4 form-group">
+                                                    <label for="exampleInput11">Height (inch)</label>
+                                                    <input type="text" class="form-control" id="sea-height"  placeholder="">
+                                                </div>
+                                                
+                                                <div class="col-md-12">
+                                                    <button type="button" class="btn btn-block btn-danger" onclick="calculateSea()"><i class="fa fa-calculator"></i>Calculate</button>
+                                                </div>
                                             </div>
                                             <div class="express box">
                                                 me and success
@@ -501,14 +524,13 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="text-center mb-3">Shipping Result</h5>
-                                    <p><Strong>Method:</Strong> &nbsp; AIr</p>
-                                    <p><Strong>Number Of Packages:</Strong> &nbsp; 3</p>
-                                    <p><Strong>Freight</Strong> &nbsp; 34$</p>
-                                    <p><Strong>Fuel</Strong> &nbsp; 3.14</p>
-                                    <p><Strong>Insurance:</Strong> &nbsp; 3.14</p>
-                                    <p><Strong>CIF:</Strong> &nbsp; 3.14</p>
-                                     <hr>
-                                    <p class="text-right"><strong>Total:</strong> &nbsp;23.00</p>
+                                    <p class="calc-est"><strong>Freight</strong> <span class="to-right" id="est-freight">$ 0.00</span> </p> <hr>
+                                        <p class="calc-est"><strong>Insurance</strong> <span class="to-right" id="est-ins">$ 0.00</span> </p> <hr>
+                                        <p class="calc-est"> <strong>Fuel</strong> <span class="to-right" id="est-fuel">$ 0.00</span> </p> <hr>
+                                        <p class="calc-est font-weight-bold mt-3"><Strong>Duty Fee </Strong><span class="to-right" id="est-duty">$ 0.00</span></p> <hr>
+                                        <p class="calc-est"><Strong>CIF</Strong> <span class="to-right" id="est-cif">$ 0.00</span> </p> <hr>
+                                        <p class="calc-est to-right font-weight-bold"><Strong class="mr-2">Total</Strong> <span  id="est-total">$ 0.00</span> </p> 
+                                    
                                 </div>
                             </div>
                         </div>
@@ -648,10 +670,61 @@
                  $(".box").not(".express").hide();
                  $(".express").show();
              }
- 
-            
+
          });
      }).change();
  });
+
+
+ function calculateAir() {
+            var airAmount = $("#air-amount").val();
+            var airWeight = $("#air-weight").val();
+            var insurance = 1.50;
+            var fuel = 1.00;
+            var freight = 4.50;
+            var cif = parseFloat(airAmount) + parseFloat(insurance) + parseFloat(freight);
+            var duty = parseFloat(0.25) * cif;
+            var total = freight + insurance + fuel;
+            var sum = total + duty
+
+
+
+            // Select Cost estimate and set the text
+            $("#est-freight").text("$"+ freight + "0");
+            $("#est-total").text("$" + sum);
+            $("#est-cif").text("$" + cif + ".0");
+            $("#est-ins").text("$1.50");
+            $("#est-fuel").text("$1.00");
+            $("#est-duty").text(duty);
+            console.log(airWeight, airAmount);
+        }
+
+        function calculateSea() {
+            // 200 is the cost of the product value
+            var seaAmount = $("#sea-amount").val();
+            var seaLength = $("#sea-length").val();
+            var seaWidth = $("#sea-width").val();
+            var seaHeight = $("#sea-height").val();
+            var volume = parseFloat(seaLength)  * parseFloat(seaWidth) * parseFloat(seaHeight);
+            var total = volume / 1728;
+            var fuel = parseFloat(1.00);
+            var freight = 120.0;
+            var insurance = parseFloat(0.1) * 200;
+            var dutyrate = parseFloat(0.35) * seaAmount;
+            var cif = 200 + fuel + insurance;
+            var sum = 120 + fuel + insurance;
+
+            // var cif = parseFloat(seaAmount) + parseFloat(insurance) + parseFloat(freight);
+
+
+            // Select Cost estimate and set the text
+            $("#est-freight").text("$"+ "120.00");
+            $("#est-total").text("$"+ sum+ ".00" );
+            $("#est-cif").text( "$" + cif);
+            $("#est-ins").text("$" + insurance + ".00");
+            $("#est-fuel").text("$1.00");
+            $("#est-duty").text("$" + dutyrate + ".00");
+            // console.log(airWeight, airAmount);
+        }
  </script>
 </html>
