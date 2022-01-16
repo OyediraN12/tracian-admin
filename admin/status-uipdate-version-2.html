@@ -18,11 +18,10 @@
 
     <!-- Master Stylesheet [If you remove this CSS file, your file will be broken undoubtedly.] -->
     <link rel="stylesheet" href="style.css">
+    <!-- tag scropt -->
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <style>
-        .red-as{
-            color: red;
-            font-size: 12px;
-        }
         .bold{
             font-weight: bolder;
         }
@@ -133,9 +132,6 @@
  }
     </style>
 
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
-
 </head>
 
 <body>
@@ -169,10 +165,10 @@
                                 <ul class="treeview-menu">
                                     <li class="active"><a href="calendar.html">+ Create Container</a></li>
                                     <li><a href="widgets.html">+ Create Package</a></li>
-                                    <li><a href="chat-box.html">+ Create Droplet</a></li>
+                                    <li><a href="chat-box.html">+ Add Direct Alert</a></li>
                                     <li><a href="timeline.html"><i class="fa fa-cubes"></i>Manage Containers</a></li>
                                     <li><a href="timeline.html"><i class="fa fa-cube"></i> Package Management</a></li>
-                                    <li><a href="timeline.html"><i class="fa fa-dropbox"></i> Drop Alert Packages</a></li>
+                                    <li><a href="timeline.html"><i class="fa fa-gg"></i> Request Pickup</a></li>
                                     <li><a href="timeline.html"><i class="fa fa-file-text-o"></i> Client Form</a></li>
                                 </ul>
                             </li>
@@ -196,6 +192,24 @@
                                     <li><a href="crm-contact.html"> <i class="fa fa-file-text-o"></i>Package Reporting</a></li>
                                     <li><a href="crm-contact.html"> <i class="fa fa-edit"></i>Update Package Account</a></li>
                                     <li><a href="crm-contact.html"> <i class="fa fa-trash"></i>Delete Packages</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="index.html"><i class="fa fa-address-book-o"></i> <span>Client Center</span></a></li>
+                            <li class="treeview">
+                                <a href="javascript:void(0)"><i class="fa fa-user"></i> <span>Employees</span> <i class="fa fa-angle-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="analytic-customer.html"><i class="fa fa-user-plus"></i>Add New Employees</a></li>
+                                    <li><a href="analytic-report.html"><i class="fa fa-vcard-o"></i>Manage Employees</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="index.html"><i class="fa fa-th"></i> <span>Roles</span></a></li>
+                            <li class=""><a href="index.html"><i class="fa fa-dollar"></i> <span>Exchange Rate</span></a></li>
+                            
+                            <li class="treeview">
+                                <a href="javascript:void(0)"><i class="fa fa-credit-card"></i> <span>Billing Module</span> <i class="fa fa-angle-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="a"><i class="fa fa-user-plus"></i>Billing Rate</a></li>
+                                    <li><a href="analytic-report.html"><i class="fa fa-vcard-o"></i>Package Billing</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -401,243 +415,279 @@
             <!-- Main Content Area -->
             <div class="main-content">
                 <div class="container-fluid">
-                    <div class="card">
+                    <div class="card create mb-30 col-lg-12 col-lg-offset-4">
                         <div class="card-body">
+                            <h4 class="text-center mt-4 mb-4" style="text-transform: uppercase;">Create Container</h4>
                             <form>
-                                <h3>Air Package details</h3> <p class="badge badge-info badge-pill">0001</p>
                                 <div class="form-row pd-3">
                                     <div class="form-group col-md-12">
-                                        <label class="col-form-label bold">Courier Tracking No</label>
-                                        <input type="text" class="form-control" disabled >
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Customer Account Number</label>
-                                        <input type="text" class="form-control" disabled >
-                                         <a href="" class="badge badge-success">History</a>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Consignee</label>
-                                        <input type="text" class="form-control" disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Courier company</label>
-                                        <input type="text" class="form-control" >
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Shipper/Merchant</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Remarks</label>
-                                        <input type="email" class="form-control" >
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label">Package Description</label>
-                                        <select class="form-control js-example-basic-single">
-                                            <option value="AL">Alabama</option>
-                                            <option value="WY">Wyoming</option>
+                                        <label for="inputCity" class="col-form-label bold">Tracking ID</label>
+                                        <select id="inputState" class="form-control">
+                                            <option disabled>Select Type</option>
+                                            <option>Air</option>
+                                            <option>SEA</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Number Of Pieces</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Package Value(USD)</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Actual Weight (LBS)</label>
-                                        <input type="text" class="form-control" id="lbs" onkeyup="mult(this.value);">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Actual Weight (KG)</label>
-                                        <input type="text" class="form-control" id="kg" disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">Total Weight (LBS)</label>
-                                        <input type="text" class="form-control" id="lbs2"  disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="col-form-label bold">File upload</label>
-                                        <input type="file" name="img[]" class="file-upload-default">
-                                        <div class="input-group col-xs-12">
-                                            <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
-                                            <span class="input-group-append">
-                                                <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                                            </span>
-                                        </div>
+                                    <div class="form-group pd-3 col-md-12">
+                                        <select class="js-example-basic-multiple" multiple="multiple" style="width: 100%;">
+                                            <option value="AL">Alabama</option>
+                                              ...
+                                            <option value="WY">Wyoming</option>
+                                            <option value="0">-- Select Country --</option>
+<option selected="" value="United States">United States</option>
+<option value="Canada">Canada</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua">Antigua</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijani">Azerbaijani</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Barbados">Barbados</option>
+<option value="Belarus">Belarus</option>
+<option value="Netherlands">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Benin">Benin</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Bhutan">Bhutan</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Bosnia-Hercegovina">Bosnia-Hercegovina</option>
+<option value="Botswana">Botswana</option>
+<option value="Bouvet Island">Bouvet Island</option>
+<option value="Brazil">Brazil</option>
+<option value="British IOT">British IOT</option>
+<option value="Brunei Darussalam">Brunei Darussalam</option>
+<option value="Bulgaria">Bulgaria</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Cambodia">Cambodia</option>
+<option value="Cameroon">Cameroon</option>
+<option value="Cape Verde">Cape Verde</option>
+<option value="Cayman Islands">Cayman Islands</option>
+<option value="Central African Rep">Central African Rep</option>
+<option value="Chad">Chad</option>
+<option value="Chile">Chile</option>
+<option value="China">China</option>
+<option value="Christmas Island">Christmas Island</option>
+<option value="Cocos Islands">Cocos Islands</option>
+<option value="Colombia">Colombia</option>
+<option value="Comoros">Comoros</option>
+<option value="Congo">Congo</option>
+<option value="Cook Islands">Cook Islands</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="Croatia">Croatia</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Czech Republic">Czech Republic</option>
+<option value="Denmark">Denmark</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Dominica">Dominica</option>
+<option value="Dominican Republic">Dominican Republic</option>
+<option value="East Timor">East Timor</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Egypt">Egypt</option>
+<option value="El Salvador">El Salvador</option>
+<option value="Equatorial Guinea">Equatorial Guinea</option>
+<option value="Eritrea">Eritrea</option>
+<option value="Estonia">Estonia</option>
+<option value="Ethiopia">Ethiopia</option>
+<option value="Faeroe Islands">Faeroe Islands</option>
+<option value="Falkland Islands">Falkland Islands</option>
+<option value="Fiji">Fiji</option>
+<option value="Finland">Finland</option>
+<option value="France">France</option>
+<option value="French Guiana">French Guiana</option>
+<option value="French Polynesia">French Polynesia</option>
+<option value="French Southern">French Southern</option>
+<option value="French Southern Ter">French Southern Ter</option>
+<option value="Gabon">Gabon</option>
+<option value="Gambia">Gambia</option>
+<option value="Georgia">Georgia</option>
+<option value="Germany">Germany</option>
+<option value="Ghana">Ghana</option>
+<option value="Gibraltar">Gibraltar</option>
+<option value="Greece">Greece</option>
+<option value="Greenland">Greenland</option>
+<option value="Grenada">Grenada</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guam">Guam</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guinea">Guinea</option>
+<option value="Guinea-Bissau">Guinea-Bissau</option>
+<option value="Guyana">Guyana</option>
+<option value="Haiti">Haiti</option>
+<option value="Heard">Heard</option>
+<option value="Honduras">Honduras</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Hungary">Hungary</option>
+<option value="Iceland">Iceland</option>
+<option value="India">India</option>
+<option value="Indonesia">Indonesia</option>
+<option value="Ireland">Ireland</option>
+<option value="Israel">Israel</option>
+<option value="Italy">Italy</option>
+<option value="Ivory Coast">Ivory Coast</option>
+<option value="Jamaica">Jamaica</option>
+<option value="Japan">Japan</option>
+<option value="Jordan">Jordan</option>
+<option value="Kazakhstan">Kazakhstan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Kuwait">Kuwait</option>
+<option value="Kyrgyzstan">Kyrgyzstan</option>
+<option value="Laos">Laos</option>
+<option value="Latvia">Latvia</option>
+<option value="Lebanon">Lebanon</option>
+<option value="Lesotho">Lesotho</option>
+<option value="Liberia">Liberia</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Lithuania">Lithuania</option>
+<option value="Luxembourg">Luxembourg</option>
+<option value="Macau">Macau</option>
+<option value="Macedonia">Macedonia</option>
+<option value="Madagascar">Madagascar</option>
+<option value="Malawi">Malawi</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Maldives">Maldives</option>
+<option value="Mali">Mali</option>
+<option value="Malta">Malta</option>
+<option value="Marshall Islands">Marshall Islands</option>
+<option value="Martinique">Martinique</option>
+<option value="Mauritania">Mauritania</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Mayotte">Mayotte</option>
+<option value="Mexico">Mexico</option>
+<option value="Micronesia">Micronesia</option>
+<option value="MNP">MNP</option>
+<option value="Moldova">Moldova</option>
+<option value="Monaco">Monaco</option>
+<option value="Mongolia">Mongolia</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Morocco">Morocco</option>
+<option value="Mozambique">Mozambique</option>
+<option value="Myanmar">Myanmar</option>
+<option value="Namibia">Namibia</option>
+<option value="Nauru">Nauru</option>
+<option value="Nepal">Nepal</option>
+<option value="NER">NER</option>
+<option value="Netherlands">Netherlands</option>
+<option value="Neutral Zone">Neutral Zone</option>
+<option value="New Caledonia">New Caledonia</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Nicaragua">Nicaragua</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Niue">Niue</option>
+<option value="Norfolk Island">Norfolk Island</option>
+<option value="North Korea">North Korea</option>
+<option value="Norway">Norway</option>
+<option value="Oman">Oman</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palau">Palau</option>
+<option value="Panama">Panama</option>
+<option value="Papua New Guinea">Papua New Guinea</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Philippines">Philippines</option>
+<option value="Pitcairn">Pitcairn</option>
+<option value="Poland">Poland</option>
+<option value="Portugal">Portugal</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="Qatar">Qatar</option>
+<option value="Reunion">Reunion</option>
+<option value="Romania">Romania</option>
+<option value="Russia">Russia</option>
+<option value="Rwanda">Rwanda</option>
+<option value="Saint Helena">Saint Helena</option>
+<option value="Saint Lucia">Saint Lucia</option>
+<option value="Saint Pierre">Saint Pierre</option>
+<option value="Saint Vincent">Saint Vincent</option>
+<option value="Samoa">Samoa</option>
+<option value="San Marino">San Marino</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Scotland">Scotland</option>
+<option value="Senegal">Senegal</option>
+<option value="Seychelles">Seychelles</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="Singapore">Singapore</option>
+<option value="Slovak Republic">Slovak Republic</option>
+<option value="Slovenia">Slovenia</option>
+<option value="Solomon Islands">Solomon Islands</option>
+<option value="Somali Democratic">Somali Democratic</option>
+<option value="South Africa">South Africa</option>
+<option value="South Georgia">South Georgia</option>
+<option value="South Korea">South Korea</option>
+<option value="Spain">Spain</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="St. Kitts and Nevis">St. Kitts and Nevis</option>
+<option value="STP">STP</option>
+<option value="Suriname">Suriname</option>
+<option value="Svalbard">Svalbard</option>
+<option value="Swaziland">Swaziland</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Syria">Syria</option>
+<option value="Taiwan">Taiwan</option>
+<option value="Tajikistan">Tajikistan</option>
+<option value="Tanzania">Tanzania</option>
+<option value="TCA">TCA</option>
+<option value="Thailand">Thailand</option>
+<option value="Toga">Toga</option>
+<option value="Togolese">Togolese</option>
+<option value="Tokelau">Tokelau</option>
+<option value="Tongo">Tongo</option>
+<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Turkey">Turkey</option>
+<option value="Turkmenistan">Turkmenistan</option>
+<option value="Tuvalu">Tuvalu</option>
+<option value="Uganda">Uganda</option>
+<option value="Ukraine">Ukraine</option>
+<option value="United Arab">United Arab</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Upper Volta">Upper Volta</option>
+<option value="Uruguay">Uruguay</option>
+<option value="USSR(Former)">USSR(Former)</option>
+<option value="Uzbekistan">Uzbekistan</option>
+<option value="Vanuatu">Vanuatu</option>
+<option value="Vatican City">Vatican City</option>
+<option value="Venezuela">Venezuela</option>
+<option value="VI, British">VI, British</option>
+<option value="Viet Nam">Viet Nam</option>
+<option value="Virgin Islands, USA">Virgin Islands, USA</option>
+                                            
+                                          </select>
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label class="col-form-label bold">Copy And Paste Invoice/ Document</label>
+                                        <label for="inputState" class="col-form-label bold">Update Status</label>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Select--</option>
+                                            <option value="">Order Confirmed</option>
+                                            <option value="">Picked By Courier</option>
+                                            <option value="">On the way</option>
+                                            <option value="">Ready For Pick Up</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="inputState" class="col-form-labelvbold">Remarks</label>
                                         <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
                                     </div>
-                                    <a href="create-pakage=id2.html" class="btn btn-success mb-2 mr-2">Save Changes</a>
+                                    <div class="mb-3">
+                                        <button class="btn btn-primary"> Submit</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
-                    </div>  
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <p class="badge badge-warning badge-pill">Tracking Number / label fields</p>
-                            <form action="">
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Tracking Id</label>
-                                    <input type="text" class="form-control" disabled >
-                                </div>
-                               
-                            </div>
-                            </form>
-                        </div>
-                    </div> 
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <p class="badge badge-warning badge-pill">Payment Status </p>
-                            <form action="">
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Payment Status</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Paid</option>
-                                        <option value="">Not paid</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                 <h3 class="badge badge-warning badge-pill">shippment details</h3>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Cosignee</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Date Packaged Received</label>
-                                    <input type="date" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Arrival Date</label>
-                                    <input type="date" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Shipped By</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Courier phone</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold">Package Status</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Order Confirmed</option>
-                                        <option value="">Picked By Courier</option>
-                                        <option value="">On the way</option>
-                                        <option value="">Ready For Pick Up</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                    <a href="" class="btn btn-success mb-2 mr-2">Save Changes</a>
-                                </div>
-                            </div>
-                            </form>
-                        </div>
-                    </div> 
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <p class="badge badge-info badge-pill">Fees / Additional Fees </p>
-                            <form action="">
-                            <div class="form-row">
-                                <h6>Shipping charges</h6>
-                                <div class="col-md-12">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Package Weight</label>
-                                    <input type="text" class="form-control" placeholder="4.5lbs" disabled>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Rate fee</label>
-                                    <input type="text" class="form-control" placeholder="$14.00">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Insurance fee</label>
-                                    <input type="text" class="form-control" placeholder="$1.50">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Fuel fee</label>
-                                    <input type="text" class="form-control" value="$1.00" >
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Shipping Total</label>
-                                    <input type="text" class="form-control" value="$16.50"  disabled>
-                                </div>
-                                <hr>
-                                <div class="col-12">
-                                    <h6 style="color: #007bff;">CIF Value </h6>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Cost Of package</label>
-                                    <input type="text" class="form-control" placeholder="$100">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Insurance</label>
-                                    <input type="text" class="form-control" placeholder="$1.50">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">Freight</label>
-                                    <input type="text" class="form-control" placeholder="14.0">
-                                </div>
-                                <div class="form-group col-md-3">
-                                  <label class="col-form-label bold">CIF Total</label>
-                                  <input type="text" class="form-control" placeholder="$118.5" disabled>
-                                </div>
-                                
-
-                                <div class="col-12"> <h5>Taxes</h5>
-                                    <p class="red-as">Shipping taxes</p> 
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="col-form-label bold"></label>
-                                    <input type="text" class="form-control" placeholder="ELectronics --45%" >
-                                </div>
-                                <!-- <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% ID</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                               </div>
-                                <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% GCT</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% SCF</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label class="col-form-label bold">% ENVL</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label class="col-form-label bold">STAMP</label>
-                                    <input type="text" class="form-control" placeholder="" >
-                                </div> -->
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Estimated Duty fee</label>
-                                    <input type="text" class="form-control" value="$45.00" disabled>
-                                </div>
-                                <div class="col-12"> <h5>Gross Total</h5>
-                                    <p class="red-as">%tax of Sumtotal</p> 
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label class="col-form-label bold">Gross Total</label>
-                                    <input type="text" class="form-control" placeholder="$54"disabled >
-                                </div>
-                                <div class="col-md-12">
-                                    <a href="" class="btn btn-success mb-2 mr-2">Save Changes</a>
-                                </div>
-                            </div>
-                            </form>
-                        </div>
-                    </div> 
-                 <div class="height-200"></div>
+                    </div>
+                        <div class="height-300"></div>
                 </div>
 
                 <!-- Footer Area -->
@@ -675,28 +725,15 @@
     <script src="js/bundle.js"></script>
     <script src="js/default-assets/setting.js"></script>
     <script src="js/default-assets/fullscreen.js"></script>
-    <script>
-
-        function mult(value){
-            var x, y ;
-            x = 1.00 * value
-            y = 0.453 * value;
-            z=  1 * value
-            document.getElementById('lbs').value = x;
-            document.getElementById('kg').value = y;
-            document.getElementById('lbs2').value = z;
-        }
-
-    </script>
 
     <!-- Active JS -->
     <script src="js/default-assets/active.js"></script>
 
+    <!-- tag script -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        // In your Javascript (external .js resource or <script> tag)
-        $(document).ready(function() {
-            $('.js-example-basic-single').select2();
+         $(document).ready(function() {
+        $('.js-example-basic-multiple').select2();
         });
     </script>
     
@@ -770,16 +807,9 @@
         })
 
         });
-            </script>
-            <script>
-                function calc(){
-                    var n1 = document.getElementById()
-                }
     </script>
-
 
 </body>
 
 
-<!-- Mirrored from demo.riktheme.com/antina-v2/minimalistic/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Oct 2021 10:20:34 GMT -->
 </html>
