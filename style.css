@@ -1021,7 +1021,7 @@ a:hover, a:active {
   list-style: none;
   padding: 0px;
   margin: 0px;
-  margin-left: 25px;
+  /* margin-left: 25px; */
 }
 .social-list li {
   display: inline-block;
@@ -5955,14 +5955,15 @@ div.tp-bullet.selected, div.tp-bullet:hover {
     margin: 0;
 }
 .partners-slide img {
-    -webkit-filter: contrast(0%);
-    filter: contrast(0%);
+    /* -webkit-filter: contrast(0%);
+    filter: contrast(0%); */
     opacity: .7;
     transition: all 0.3s linear;
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     -ms-transition: all 0.3s linear;
+    
 }
 .partners-slide img:hover {
     -webkit-filter: none;
@@ -6315,7 +6316,7 @@ div.tp-bullet.selected, div.tp-bullet:hover {
     padding-bottom: 25px;
 }
 .section-consultation {
-    background-image: url(images/background/bg-cta-home2.jpg);
+    background-image: url(images/background/contact.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
