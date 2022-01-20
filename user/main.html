@@ -486,13 +486,13 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <button type="button" class="btn btn-block btn-danger" onclick="calculateAir()"><i class="fa fa-calculator"></i>Calculate</button>
+                                                    <button type="button" class="btn btn-block btn-danger" onclick="calculateAir()"><i class="fa fa-calculator"></i> Calculate</button>
                                                 </div>
                                             </div>
                                             <div class="row sea box">
                                                 <div class="col-md-12 form-group">
                                                     <label for="exampleInputPassword11">Invoice Amount USD</label>
-                                                    <input type="text" class="form-control"  placeholder="">
+                                                    <input type="text" class="form-control"  placeholder="" id="sea-amount">
                                                 </div>
                                                 <div class="col-md-4 form-group">
                                                     <label for="exampleInput11">Lenght (inch)</label>
@@ -508,14 +508,30 @@
                                                 </div>
                                                 
                                                 <div class="col-md-12">
-                                                    <button type="button" class="btn btn-block btn-danger" onclick="calculateSea()"><i class="fa fa-calculator"></i>Calculate</button>
+                                                    <button type="button" class="btn btn-block btn-danger" onclick="calculateSea()"><i class="fa fa-calculator"></i> Calculate</button>
                                                 </div>
                                             </div>
-                                            <div class="express box">
-                                                me and success
+                                            <div class="row express box">
+                                                <div class="col-md-6 form-group">
+                                                    <label for="exampleInputPassword11">Invoice Amount USD</label>
+                                                    <input type="text" class="form-control" id="express-amount" placeholder="">
+                                                </div>
+                                                
+                                                <div class="col-md-6 form-group">
+                                                    <label for="exampleInput11">Weight (lbs)</label>
+                                                    <input type="text" class="form-control" id="express-weight" placeholder="">
+                                                </div>
+                                                <div class="col-md-12 form-group">
+                                                    <label for="">Item Description</label>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">Cloth</option>
+                                                        <option>New</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <button type="button" class="btn btn-block btn-danger" onclick="calculateExpress()"><i class="fa fa-calculator"></i> Calculate</button>
+                                                </div>
                                             </div>
-                                            
-                                            
                                         </form>
                                 </div>
                             </div>
@@ -525,12 +541,12 @@
                                 <div class="card-body">
                                     <h5 class="text-center mb-3">Shipping Result</h5>
                                     <p class="calc-est"><strong>Freight</strong> <span class="to-right" id="est-freight">$ 0.00</span> </p> <hr>
-                                        <p class="calc-est"><strong>Insurance</strong> <span class="to-right" id="est-ins">$ 0.00</span> </p> <hr>
-                                        <p class="calc-est"> <strong>Fuel</strong> <span class="to-right" id="est-fuel">$ 0.00</span> </p> <hr>
-                                        <p class="calc-est font-weight-bold mt-3"><Strong>Duty Fee </Strong><span class="to-right" id="est-duty">$ 0.00</span></p> <hr>
-                                        <p class="calc-est"><Strong>CIF</Strong> <span class="to-right" id="est-cif">$ 0.00</span> </p> <hr>
-                                        <p class="calc-est to-right font-weight-bold"><Strong class="mr-2">Total</Strong> <span  id="est-total">$ 0.00</span> </p> 
-                                    
+                                    <p class="calc-est"><strong>Insurance</strong> <span class="to-right" id="est-ins">$ 0.00</span> </p> <hr>
+                                    <p class="calc-est"> <strong>Fuel</strong> <span class="to-right" id="est-fuel">$ 0.00</span> </p> <hr>
+                                    <p class="calc-est font-weight-bold mt-3"><Strong>Duty Fee </Strong><span class="to-right" id="est-duty">$ 0.00</span></p> <hr>
+                                    <p class="calc-est"><Strong>CIF</Strong> <span class="to-right" id="est-cif">$ 0.00</span> </p> <hr>
+                                    <p class="calc-est to-right font-weight-bold"><Strong class="mr-2">Total</Strong> <span  id="est-total">$ 0.00</span> </p> 
+                                
                                 </div>
                             </div>
                         </div>
@@ -710,7 +726,7 @@
             var fuel = parseFloat(1.00);
             var freight = 120.0;
             var insurance = parseFloat(0.1) * 200;
-            var dutyrate = parseFloat(0.35) * seaAmount;
+            var dutyrate = 0.35 * parseFloat(seaAmount);
             var cif = 200 + fuel + insurance;
             var sum = 120 + fuel + insurance;
 
@@ -723,8 +739,33 @@
             $("#est-cif").text( "$" + cif);
             $("#est-ins").text("$" + insurance + ".00");
             $("#est-fuel").text("$1.00");
-            $("#est-duty").text("$" + dutyrate + ".00");
+            $("#est-duty").text("$" + dutyrate);
             // console.log(airWeight, airAmount);
         }
+
+        function calculateExpress() {
+            var expressAmount = $("#express-amount").val();
+            var expressWeight = $("#express-weight").val();
+            var insurance = 1.50;
+            var fuel = 1.00;
+            var freight = 25.00;
+            var cif = parseFloat(expressAmount) + parseFloat(insurance) + parseFloat(freight);
+            var duty = parseFloat(0.25) * cif;
+            var total = freight + insurance + fuel;
+            var sum = total + duty
+
+
+
+            // Select Cost estimate and set the text
+            $("#est-freight").text("$"+ freight + "0");
+            $("#est-total").text("$" + sum);
+            $("#est-cif").text("$" + cif + ".0");
+            $("#est-ins").text("$1.50");
+            $("#est-fuel").text("$1.00");
+            $("#est-duty").text(duty);
+    
+            // console.log(airWeight, airAmount);
+    }
+        
  </script>
 </html>
