@@ -8,6 +8,71 @@
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/login.css">
+  <style>
+    /* #button Group
+    ================================================== */
+    .octf-btn {
+      transition: all 0.3s linear;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      font-size: 14px;
+      padding: 14px 30px 14px 30px;
+      line-height: 1.42857143;
+      display: inline-block;
+      margin-bottom: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+      vertical-align: middle;
+      font-weight: bold;
+      text-align: center;
+      background: #12cae1;
+      cursor: pointer;
+      border: 1px solid transparent;
+      color: #fff;
+      outline: none;
+    }
+    .octf-btn:visited {
+      color: #fff;
+    }
+    .octf-btn:hover, .octf-btn:focus {
+      background: #6fd43a;
+      color: #fff;
+    }
+
+    .octf-btn.octf-btn-second {
+      background: #6fd43a;
+      color: #fff;
+    }
+    .octf-btn.octf-btn-second:visited {
+      background: #6fd43a;
+      color: #fff;
+    }
+    .octf-btn.octf-btn-second:hover, .octf-btn.octf-btn-second:focus {
+      background: #12cae1;
+    }
+
+    .octf-btn.octf-btn-light {
+      background: #fff;
+      color: #1b1d21;
+    }
+    .octf-btn.octf-btn-light:visited {
+      background: #fff;
+      color: #1b1d21;
+    }
+    .octf-btn.octf-btn-light:hover, .octf-btn.octf-btn-light:focus {
+      color: #fff;
+      background: #1b1d21;
+    }
+      .box{
+          font-size: 18px;
+      }
+      .logo{
+        margin-bottom: 20px;
+      }
+  </style>
 </head>
 <body>
   <main>
@@ -32,7 +97,7 @@
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" class="form-control" placeholder="enter your passsword">
               </div>
-              <input name="login" id="login" class="btn btn-block login-btn" type="button" value="Login">
+              <input name="login" id="login" class="btn btn-block octf-btn octf-btn-primary" type="button" value="Login">
             </form>
             <a href="#!" class="forgot-password-link">Forgot password?</a>
             <p class="login-wrapper-footer-text">Don't have an account? <a href="#!" class="text-reset">Register here</a></p>
