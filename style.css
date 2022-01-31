@@ -1230,7 +1230,7 @@ a:hover, a:active {
   line-height: 1;
 }
 #site-logo img {
-  width: 225px;
+  width: 400px;
 }
 #site-logo img.logo-static {
   display: block;
@@ -6316,7 +6316,7 @@ div.tp-bullet.selected, div.tp-bullet:hover {
     padding-bottom: 25px;
 }
 .section-consultation {
-    background-image: url(images/background/contact.jpg);
+    background-image: url(images/background/contact-bg.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

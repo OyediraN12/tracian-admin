@@ -24,7 +24,8 @@
      <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/settings.css">   
      <!-- REVOLUTION NAVIGATION STYLE -->
      <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
-
+    <!-- slider -->
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/royal-preload.css" />
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> 
@@ -67,6 +68,32 @@
             border: 1px solid black;
             border-radius: 10px;
         }
+        #container {
+            overflow: hidden;
+            width: 100%;
+            height: autopx;
+            margin: 0 auto;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        #imgs {
+            display: block;
+            padding: 0;
+            width: 900%;
+        }
+        
+        #imgs li {
+            padding-right: 10px;
+            display: inline-block;
+            *display: inline;
+        }
+        
+        #imgs img {
+            width: 200px;
+            height: auto;
+            margin-right: 30px;
+        }
         
     </style>
 </head>
@@ -81,8 +108,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="topbar-info">
-                                    <li><i class="fas fa-envelope"></i><a href="mailto:engitech@mail.net"> engitech@mail.net</a></li>
-                                    <li><i class="fas fa-clock"></i> Mon - Sat: 8.00 am - 7.00 pm</li>
+                                    <li><i class="fas fa-envelope"></i><a href="mailto:engitech@mail.net"> support@dsija.com</a></li>
+                                    <li><i class="fas fa-clock"></i> Mon - Fri: 9.00 am - 6.00 pm</li>
                                 </ul>
                             </div>
                             <div class="col-md-6 text-right">
@@ -332,7 +359,7 @@
                         </li>  
                                      
 
-                        <!-- SLIDE 1 -->
+                        <!-- SLIDE 2 -->
                         <li data-index="rs-71" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/slider/slide2-home1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="1" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
                             <img src="images/slider/slide2.png" data-bgcolor='#ffffff' style='' alt=""  data-bgposition="50% 50%" data-bgfit="auto" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
@@ -415,7 +442,7 @@
                             </div>  
                         </li>  
 
-                        <!-- SLIDE 1 -->
+                        <!-- SLIDE 3 -->
                         <li data-index="rs-72" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/slider/slide3-home1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="1" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
                             <img src="images/slider/slide3.jpg" data-bgcolor='#ffffff' style='' alt=""  data-bgposition="50% 50%" data-bgfit="auto" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
@@ -543,7 +570,7 @@
 
                                 data-textAlign="['left','left','left','left']"
             
-                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;">Ocean <br> Delivery
+                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;">Intenational Package <br> & Freight Forwarding From USA
                             </div>
                                                                 
                             <!-- LAYER 5  Paragraph-->
@@ -562,7 +589,9 @@
                                 
                                 data-textAlign="['left','left','left','left']"
             
-                                style="z-index: 10; white-space: normal; color: #fff;font-family: 'Nunito Sans', sans-serif;">Our Direct Saver program is an economical offer to transport your large shipments and save money  </div> 
+                                style="z-index: 10; white-space: normal; color: #fff;font-weight:bold;font-family: 'Nunito Sans', sans-serif;"><p >→ low SHipping Fee <br> → Fast Delivery <br>→ Smooth Custom Clearance</p>
+                            
+                            </div> 
     
                             <!-- LAYER 6  Read More-->
                             <div class="tp-caption rev-btn" 
@@ -601,79 +630,22 @@
                                     <span>//Shop amazing deals <br> from your favorite store</span>
                                 </div>
                             </div>
-                            <div class="partners">
-                                <div class="owl-carousel owl-theme home-client-carousel" id="btn2">
-                                    <div class="partners-slide">
-                                        <a href="index-2.html" class="client-logo">
-                                            <figure class="partners-slide-inner">
-                                                <img class="partners-slide-image" src="images/store/logo1.png" alt="">
-                                            </figure>                             
-                                        </a>
-                                    </div>
-                                    <div class="partners-slide">
-                                        <a href="index-2.html" class="client-logo">
-                                            <figure class="partners-slide-inner">
-                                                <img class="partners-slide-image" src="images/store/logo2.png" alt="">
-                                            </figure>                             
-                                        </a>
-                                    </div>
-                                    <div class="partners-slide">
-                                        <a href="index-2.html" class="client-logo">
-                                            <figure class="partners-slide-inner">
-                                                <img class="partners-slide-image" src="images/store/logo3.png" alt="">
-                                            </figure>                             
-                                        </a>
-                                    </div>
-                                    <div class="partners-slide">
-                                        <a href="index-2.html" class="client-logo">
-                                            <figure class="partners-slide-inner">
-                                                <img class="partners-slide-image" src="images/store/logo4.png" alt="">
-                                            </figure>                             
-                                        </a>
-                                    </div>
-                                    <div class="partners-slide">
-                                        <a href="index-2.html" class="client-logo">
-                                            <figure class="partners-slide-inner">
-                                                <img class="partners-slide-image" src="images/store/logo5.png" alt="">
-                                            </figure>                             
-                                        </a>
-                                    </div>
-                                    <div class="partners-slide">
-                                        <a href="index-2.html" class="client-logo">
-                                            <figure class="partners-slide-inner">
-                                                <img class="partners-slide-image" src="images/store/logo6.png" alt="">
-                                            </figure>                             
-                                        </a>
-                                    </div>
-                                    <div class="partners-slide">
-                                        <a href="index-2.html" class="client-logo">
-                                            <figure class="partners-slide-inner">
-                                                <img class="partners-slide-image" src="images/store/logo7.png" alt="">
-                                            </figure>                             
-                                        </a>
-                                    </div>
-                                    <div class="partners-slide">
-                                        <a href="index-2.html" class="client-logo">
-                                            <figure class="partners-slide-inner">
-                                                <img class="partners-slide-image" src="images/store/logo8.png" alt="">
-                                            </figure>                             
-                                        </a>
-                                    </div>
-                                    <div class="partners-slide">
-                                        <a href="index-2.html" class="client-logo">
-                                            <figure class="partners-slide-inner">
-                                                <img class="partners-slide-image" src="images/store/logo9.png" alt="">
-                                            </figure>                             
-                                        </a>
-                                    </div>
-                                    <div class="partners-slide" >
-                                        <a href="index-2.html" class="client-logo">
-                                            <figure class="partners-slide-inner">
-                                                <img class="partners-slide-image" src="images/store/logo10.png" alt="">
-                                            </figure>                             
-                                        </a>
-                                    </div>
-                                </div>
+                            
+                            <div>
+                                <div id="container"> 
+                                    <ul id="imgs">
+                                        <li><img src="./images/store/logo1.png" alt="" /></li>
+                                        <li><img src="./images/store/logo2.png" alt="" /></li>
+                                        <li><img src="./images/store/logo3.png" alt="" /></li>
+                                        <li><img src="./images/store/logo4.png" alt="" /></li>
+                                        <li><img src="./images/store/logo5.png" alt="" /></li>
+                                        <li><img src="./images/store/logo6.png" alt="" /></li>
+                                        <li><img src="./images/store/logo7.png" alt="" /></li>
+                                        <li><img src="./images/store/logo8.png" alt="" /></li>
+                                        <li><img src="./images/store/logo9.png" alt="" /></li>
+                                        <li><img src="./images/store/logo10.png" alt="" /></li>
+                                    </ul>
+                                 </div>
                             </div>
                         </div>
                     </div>
@@ -684,7 +656,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-8 mb-4 mb-sm-0">
                             <div class="ot-heading mb-0">
-                                <span>// our service</span>
+                                <span>// our services</span>
                                 <h2 class="main-heading">We Offer a Wide <br>Variety of Services</h2>
                             </div>
                         </div>
@@ -785,18 +757,20 @@
             </section>
            
             <!-- calcu;ator section -->
-            <section class="section-consultation">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <h2>NEED A CONSULTATION?</h2>
-                            <div class="ot-button">
-                                <a href="contact.html" class="octf-btn octf-btn-primary">Contact Us</a>
+            <a href="contact.html">
+                <section class="section-consultation">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <!-- <h2>NEED A CONSULTATION?</h2> -->
+                                <!-- <div class="ot-button" style="margin-top: 50px;">
+                                    <a href="contact.html" class="octf-btn octf-btn-light" style="background-color: ;">Contact Us</a>
+                                </div> -->
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </a>
 
         </div>
 
@@ -809,7 +783,7 @@
                             <ul class="list-items">
                                 <li class="list-item"><a href="web-development.html">Pickup Rates</a></li>
                                 <li class="list-item"><a href="mobile-development.html">Get Started</a></li>
-                                <li class="list-item"><a href="mobile-development.html">Restricted Items</a></li>
+                                <li class="list-item"><a href="./pdf/Restriction Items.pdf" target="_blank">Restricted Items</a></li>
                             </ul>
                         </div>
                     </div>
@@ -826,13 +800,13 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div class="widget-footer">
                             <h5 class="text-white">Contact Us</h5>
-                            <p>Find us on social media</p>
-                            <ul class="social-list">
-                                <li><a href="http://facebook.com/" target="_self"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="http://linkedin.com/" target="_self"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="http://instagram/" target="_self"><i class="fab fa-instagram"></i></a></li> <br>
-                                <li>Address:</li>
-                                <li>phone: +234</li>
+                            <ul class="social-list" style="margin-left: 0px;">
+                                <span>Find us on social media</span> <br>
+                                <li style="margin-left: 0px;"><a href="http://facebook.com/" target="_self"><i class="fab fa-facebook-f"></i></a></li>
+                                <li style="margin-left: 0px;"><a href="http://linkedin.com/" target="_self"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li style="margin-left: 0px;"><a href="http://instagram/directsupply.ja" target="_blank"><i class="fab fa-instagram"></i></a></li> <br>
+                                <li style="margin-left: 0px;"><a href="mailto:support@dsija.com">support@dsija.com</a></li>
+                                <li style="margin-left: 0px;"><a href="tel:876393795">phone: 876-393-7954</a></li>
                             </ul>
                         </div>
                     </div>
@@ -852,7 +826,7 @@
                         <img src="images/ds.png" alt="" class="lazyloaded" data-ll-status="loaded">
                     </div>
                     <div class="col-md-8 text-left text-md-right align-self-center">
-                        <p class="copyright-text">Copyright © 2020 Engitech by ThemeModern. All Rights Reserved.</p>
+                        <p class="copyright-text"><a href="./terms.html">Terms & Condition</a> |  Copyright © 2020 Direct Supply International. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -962,6 +936,22 @@
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/header-mobile.js"></script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./js/ImageScroll.js"></script>
+    <script type="text/javascript">
+        $('#imgs').imageScroll({
+            orientation: "left",
+            speed: 600,
+            interval: 1000,
+            hoverPause: true,
+            callback: function() {
+                var ordinal = $(this).find("img").first().attr("src");
+
+                $(this).next("span").text("CallbackDisplay: hidden " + ordinal + "!");
+            }
+        });
+    </script>
     <!-- <script src="js/royal_preloader.min.js"></script> -->
 
         <!-- REVOLUTION JS FILES -->
